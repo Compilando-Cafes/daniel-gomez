@@ -146,19 +146,12 @@ public class utiles_arrays {
 		return Arrays.equals(tabla1, tabla2);
 	}
 
-	// Función para mostrar un array binario
-	public static void mostrarArrayBinario(int[][] array) {
+	// Función para mostrar un array bidimensional
+	public static void mostrarArrayBidimensional(int[][] array) {
 		for (int i = 0; i < array.length; i++) {
 			System.out.print(Arrays.toString(array[i]));
 		}
 		System.out.println();
-	}
-
-	// Función para mostrar un array binario con un forEach
-	public static void mostrarArrayBinarioConForEach(int[][] array) {
-		for (int[] fila : array) {
-			System.out.println(Arrays.toString(fila));
-		}
 	}
 
 	// Función para eliminar duplicados de un array
