@@ -3,7 +3,6 @@ package t3_bucles.ejercicios;
 public class Prueba {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		// TRIÁNGULO 1
 
 		int n = 5;
