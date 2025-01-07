@@ -13,14 +13,6 @@ public class hunde_la_flota {
 	static final String FALLO = "\u274C";
 
 	public static void main(String[] args) {
-		/*
-		 * Hola Alma! Al principio lo hice como dijiste, con: 'n'= agua, '|'= barco,
-		 * 'x'= hundido, 'z'= no acertado. Pero después, espero que no te importe,
-		 * recordé lo del Unicode que un día nos explicó María Jesús para hacer un
-		 * tablero de ajedrez y cambié los caracteres por símbolos.
-		 * 
-		 * ¡FELIZ AÑO!
-		 */
 
 		System.out.println("""
 				=======================================================

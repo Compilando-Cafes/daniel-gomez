@@ -5,7 +5,6 @@ import java.util.Scanner;
 
 public class actividadGestionMemoria {
 	static Scanner sc = new Scanner(System.in);
-
 	public static void main(String[] args) {
 		while (true) {
 			System.out.println("""
