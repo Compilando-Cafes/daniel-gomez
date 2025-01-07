@@ -17,5 +17,6 @@ public class Resuelta2_02 {
       } else {
          System.out.println("Lo numeros son distintos");
       }
+      sc.close();
    }
 }

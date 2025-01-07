@@ -15,7 +15,7 @@ public class pruebaAritmeticos {
 		
 		int resul4 = 5/2;
 		
-		System.out.println("division: " +resul4);
+		System.out.println("division: " +resul4 + resul1 + resul2 + resul3);
 		
 		float resul5 = 5.0f/2;
 		System.out.println("division2: " +resul5);

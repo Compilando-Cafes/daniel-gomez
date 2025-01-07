@@ -22,13 +22,14 @@ public class examen3Prueba {
 					4. Salir
 					=============================================
 					""");
-			int eleccion = pedirNumero("Tu opción: ", 0, 3);
+			int eleccion = pedirNumero("Tu opción: ", 0, 5);
 
 			switch (eleccion) {
 			case 1 -> calculadoraInteresCompuesto();
 			case 2 -> convertidorNumerosRomanos();
 			case 3 -> cuadradosConcentricos();
-			case 4 -> {
+			case 4 -> generadorCuadradosConcentricos();
+			case 5 -> {
 				System.out.println("Adios.");
 				return;
 			}

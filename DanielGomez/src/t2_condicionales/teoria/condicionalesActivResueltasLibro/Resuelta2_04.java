@@ -15,5 +15,6 @@ public class Resuelta2_04 {
       } else {
          System.out.println("No es un casi-cero");
       }
+      sc.close();
    }
 }

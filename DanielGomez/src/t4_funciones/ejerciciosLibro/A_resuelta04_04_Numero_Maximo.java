@@ -19,6 +19,7 @@ public class A_resuelta04_04_Numero_Maximo {
 		sc.nextLine();
 
 		System.out.println("El número mayor de los dos es: " + comparaNumeros(num1, num2));
+		sc.close();
 	}
 
 	public static int comparaNumeros(int num1, int num2) {

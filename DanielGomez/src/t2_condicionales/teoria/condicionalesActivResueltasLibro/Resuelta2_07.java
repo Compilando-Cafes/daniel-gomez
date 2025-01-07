@@ -28,5 +28,6 @@ public class Resuelta2_07 {
       } else if (c > b && b > a) {
          System.out.println(c + ", " + b + ", " + a);
       }
+      sc.close();
    }
 }

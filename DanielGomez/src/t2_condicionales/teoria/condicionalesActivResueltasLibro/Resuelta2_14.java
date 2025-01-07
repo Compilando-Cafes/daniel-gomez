@@ -37,5 +37,6 @@ public class Resuelta2_14 {
       }
       
       System.out.println(dia + "/" + mes + "/" + anyo);
+      sc.close();
    }
 }

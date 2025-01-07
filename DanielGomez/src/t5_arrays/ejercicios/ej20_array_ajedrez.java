@@ -12,9 +12,9 @@ public class ej20_array_ajedrez {
 		for (int i = 0; i < ajedrez.length; i++) {
 			for (int j = 0; j < ajedrez[i].length; j++) {
 				if ((i+j)%2==0) {
-					ajedrez[i][j]=0;
+					ajedrez[i][j]=negro;
 				} else {
-					ajedrez[i][j]=1;
+					ajedrez[i][j]=blanco;
 				}
 			}
 			System.out.println(Arrays.toString(ajedrez[i]));

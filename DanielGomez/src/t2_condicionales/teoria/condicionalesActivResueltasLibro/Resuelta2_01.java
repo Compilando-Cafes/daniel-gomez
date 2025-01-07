@@ -18,6 +18,7 @@ public class Resuelta2_01 {
       } else { // es impar
          System.out.println("Es impar");
       }
+      sc.close();
    }
 }
 

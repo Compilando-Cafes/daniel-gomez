@@ -49,7 +49,7 @@ public class ejercicioRepetido {
 			System.out.println("--------------------------------------------");
 			System.out.print("Introduce el Producto: ");
 			String nombreProducto = sc.nextLine();
-
+			System.out.println(nombreProducto);
 			int cantidad = pedirNumero("Introduce la cantidad: ", 0, 999);
 			if (cantidad == 0) {
 				return;

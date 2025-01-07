@@ -21,7 +21,7 @@ public class ej11_tabla_con_indicador_llenado {
 			Scanner sc = new Scanner(System.in);
 			String nom_recuperado = sc.nextLine();
 			nom_aux = nom_recuperado.toCharArray();
-
+			sc.close();
 			if (nom_aux.length <= 10) {
 				for (int i = 0; i < nom_aux.length; i++) {
 					nombre[i] = nom_aux[i];
@@ -32,6 +32,9 @@ public class ej11_tabla_con_indicador_llenado {
 			}
 		}
 		return nom_aux.length;
+		
+
+
 	}
 
 }

@@ -63,6 +63,7 @@ public class ejercicioDia18 {
 			System.out.println("--------------------------------------------------------------");
 			System.out.print("Introduce el Producto: ");
 			producto = sc.nextLine();
+			System.out.println(producto);
 			cantidad = leerEntero("Introduce la cantidad: ", 0, 999);
 			if (cantidad <= 0) {
 				System.out.println("Programa finalizado.");

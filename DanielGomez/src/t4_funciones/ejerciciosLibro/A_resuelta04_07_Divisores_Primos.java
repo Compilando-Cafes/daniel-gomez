@@ -15,7 +15,7 @@ public class A_resuelta04_07_Divisores_Primos {
 		sc.nextLine();
 
 		System.out.println("Número de divisores primos: " + divisoresPrimos(n));
-
+		sc.close();
 	}
 
 	public static int divisoresPrimos(int n) {

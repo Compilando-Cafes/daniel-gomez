@@ -9,6 +9,7 @@ public class ej12_recorrer_tabla_foreach {
 		int tabla2[] = {1,2,3,4,5};
 		for (int valor: tabla1) {
 			valor++;
+			System.out.println(valor);
 		}
 		for (int i = 0; i<tabla2.length; i++) {
 			tabla2[i]++;

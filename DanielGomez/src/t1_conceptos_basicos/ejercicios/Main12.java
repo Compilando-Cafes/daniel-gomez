@@ -16,7 +16,7 @@ public class Main12 {
 		
 		resultado = numero > 0 ? numero : numero * -1;
 		System.out.println("El valor absoluto es: " + resultado);
-
+		sc.close();
 	}
 
 }

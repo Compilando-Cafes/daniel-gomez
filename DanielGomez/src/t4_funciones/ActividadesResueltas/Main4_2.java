@@ -12,6 +12,7 @@ public class Main4_2 {
 		int b = sc.nextInt();
 
 		mostrar(a, b);
+		sc.close();
 	}
 	
 	static void mostrar(int a, int b) {

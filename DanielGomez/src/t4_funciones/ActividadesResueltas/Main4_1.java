@@ -12,6 +12,7 @@ public class Main4_1 {
 	      System.out.println("--Antes de llamar a la funcion--");
 	      eco(n); //invocamos la funcion
 	      System.out.println("--Después de llamar a la funcion--");
+		  sc.close();
 	   }
 
 	   static void eco(int a) {

@@ -15,6 +15,8 @@ public class Main4_10b {
       int exp = sc.nextInt();
 
       System.out.println("El resultado es: " + aElevadoN(base, exp));
+      sc.close();
+
    }
 
    static double aElevadoN(double a, int n) {

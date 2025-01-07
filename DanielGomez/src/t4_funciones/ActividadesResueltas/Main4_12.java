@@ -14,6 +14,8 @@ public class Main4_12{
 
       int resultado = fibo(num); 
       System.out.println("\nfibonacci(" + num + ") = " + resultado);
+      sc.close();
+
    }
 
    static int fibo(int num) {

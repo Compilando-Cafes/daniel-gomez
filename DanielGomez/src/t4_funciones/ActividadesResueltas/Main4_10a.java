@@ -26,5 +26,6 @@ public class Main4_10a {
 
       double res = aElevadoN(base, exp);
       System.out.println(base + " elevado a " + exp + " = " + res);
+      sc.close();
    }
 }

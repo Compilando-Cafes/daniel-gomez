@@ -82,8 +82,9 @@ public class ejercicio_Varias_Funciones {
 			}
 			sc.nextLine();
 		}
-
+		sc.close();
 		return n;
+		
 	}
 
 }

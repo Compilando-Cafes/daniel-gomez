@@ -20,15 +20,12 @@ public class trapecioHueco {
                 break;
             }
             
-            trapecioHueco(altura, ancho);
+            dibujarTrapecioHueco(altura, ancho);
         }
         
     }
     
-    static public void trapecioHueco(int altura, int ancho) {
-        // Calcular el ancho de los espacios y la parte más ancha del trapecio
-        int anchoEspacios = ancho / 4;
-        int anchoTrapecio = ancho / 2;
+    static public void dibujarTrapecioHueco(int altura, int ancho) {
 
         // Lineas del trapecio
         for (int i = 1; i <= altura; i++) {

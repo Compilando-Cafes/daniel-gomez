@@ -18,6 +18,8 @@ public static void main(String[] args) {
 
       resultado = mcd(a, b);
       System.out.println("El mcd es " + resultado);
+      sc.close();
+
    }
 
    static int mcd(int a, int b) {

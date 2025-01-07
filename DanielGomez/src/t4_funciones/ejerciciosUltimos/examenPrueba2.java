@@ -7,7 +7,6 @@ public class examenPrueba2 {
 	static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		char c;
 		pintarPiramide(pedirNumero("Introduce el número de niveles (mayor que 0): ", 1));
 	}
 
@@ -15,7 +14,6 @@ public class examenPrueba2 {
 		int arbol = 1;
 		System.out.print("Introduce un carácter para la pirámide: ");
 		char c = sc.next().charAt(0);
-		
 		System.out.println("Resultado: ");
 		// Bucle para recorrer cada fila
 		for (int i = niveles; i > 0; i--) {

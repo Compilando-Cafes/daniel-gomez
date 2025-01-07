@@ -22,5 +22,6 @@ public class resuelta2_10_a {
       } else {
          System.out.println("Error: nota no válida");
       }
+      sc.close();
    }
 }

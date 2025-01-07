@@ -19,6 +19,7 @@ public class ActividadesAplicacion2_15 {
 		System.out.print("Dime la altura del triángulo: ");
 		n2 = sc.nextDouble();
 		
+		System.out.println(n1 + n2);
 		
 		
 		

@@ -53,7 +53,7 @@ public class A_resuelta04_08_Calculadora {
 				System.out.printf("Resultado: %,.2f%n", resultado);
 			}
 		}
-
+		sc.close();
 	}
 
 	public static double calculadora(double num1, double num2, int opcion) {

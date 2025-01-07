@@ -12,7 +12,6 @@ public class Ejercicio10 {
 		
 		System.out.println(resultado);
 		
-		int categoria2 = 0;
 		String resultado2 = "CATEGORÍA ERRONEA";
 		resultado2 = (categoria == 0) ? "EMPLEADO" : resultado2;
 		resultado2 = (categoria == 1) ? "ENCARGADO" : resultado2;

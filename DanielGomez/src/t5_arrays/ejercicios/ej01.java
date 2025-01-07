@@ -35,7 +35,7 @@ public class ej01 {
 		System.out.println();
 
 		for (int i = 0; i < longitud; i += 2) {
-			System.out.print(edades[i] + " ");
+			System.out.print(edades2[i] + " ");
 		}
 		System.out.println();
 

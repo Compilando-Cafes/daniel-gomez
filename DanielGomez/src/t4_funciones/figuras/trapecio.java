@@ -20,14 +20,13 @@ public class trapecio {
 				break;
 			}
 			
-			trapecio(altura, ancho);
+			dibujarTrapecio(altura, ancho);
 		}
+		dibujarTrapecio(5, 5);
 		
 	}
 	
-	static public void trapecio(int altura, int ancho) {
-		int anchoEspacios = ancho /4;
-		int anchoTrapecio = ancho /2;
+	static public void dibujarTrapecio(int altura, int ancho) {
 		// Lineas del trapecio
 		for (int i = 1; i<=altura; i++) {
 			

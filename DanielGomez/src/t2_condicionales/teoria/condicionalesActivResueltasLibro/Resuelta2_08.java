@@ -31,5 +31,6 @@ public class Resuelta2_08 {
             System.out.println("Solución 2: " + x2);
          }
       }
+      sc.close();
    }
 }

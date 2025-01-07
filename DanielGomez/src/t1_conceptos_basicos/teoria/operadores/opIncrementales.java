@@ -1,7 +1,4 @@
 package t1_conceptos_basicos.teoria.operadores;
-
-import java.util.Scanner;
-
 /**
  * Demostracion de los operadores incrementales A. Garcia-Beltran - Abril, 2006
  */

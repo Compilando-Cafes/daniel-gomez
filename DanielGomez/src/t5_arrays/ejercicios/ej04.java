@@ -37,7 +37,7 @@ public class ej04 {
 				System.out.println(tabla[i]);
 			}
 		}
-
+		sc.close();
 	}
 
 }

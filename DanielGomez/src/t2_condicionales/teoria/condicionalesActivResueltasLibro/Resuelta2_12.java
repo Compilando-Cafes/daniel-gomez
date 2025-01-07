@@ -18,7 +18,7 @@ public class Resuelta2_12 {
       //fechaCorrecta = fechaCorrecta(dia, mes, anyo);
       
       fechaCorrecta = fedhaCorrecfta2(dia, mes, anyo);
-      
+      fechaCorrecta = fechaCorrecta(dia, mes, anyo);
       
       
       
@@ -28,6 +28,7 @@ public class Resuelta2_12 {
       } else {
          System.out.println("Fecha incorrecta");
       }
+      sc.close();
    }
 
 private static boolean fedhaCorrecfta2(int dia, int mes, int anyo) {

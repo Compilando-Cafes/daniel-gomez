@@ -12,7 +12,7 @@ public class A_resuelta04_01_Ecos {
 		int n = sc.nextInt();
 		
 		ecos(n);
-
+		sc.close();
 	}
 	
 	public static void ecos(int n) {

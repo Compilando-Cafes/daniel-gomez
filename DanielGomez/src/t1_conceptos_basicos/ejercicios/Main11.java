@@ -43,6 +43,7 @@ public class Main11 {
 		
 		System.out.printf("Importe total: %,.2f€", importeTotal);
 		
+		sc.close();
 	}
 
 }

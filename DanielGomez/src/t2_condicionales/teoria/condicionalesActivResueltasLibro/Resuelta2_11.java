@@ -17,5 +17,6 @@ public class Resuelta2_11 {
          case 6 -> System.out.println("sabado");
          case 7 -> System.out.println("domingo");
       }
+      sc.close();
    }
 }

@@ -17,7 +17,7 @@ public class A_resuelta04_06_Numeros_Primos {
 		sc.nextLine();
 
 		System.out.println("¿Es primo? " + esPrimo(n));
-
+		sc.close();
 	}
 
 	public static boolean esPrimo(int n) {

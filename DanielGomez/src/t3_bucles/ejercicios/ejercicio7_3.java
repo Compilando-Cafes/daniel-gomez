@@ -54,6 +54,7 @@ public class ejercicio7_3 {
 				// Localidad
 				System.out.print("Localidad: ");
 				localidad = sc.next();
+				System.out.println(localidad);
 
 				// Número de empleados que tiene
 				while (nEmpleados <= 0) {
@@ -90,7 +91,8 @@ public class ejercicio7_3 {
 					// Petición oficio
 					System.out.print("Oficio: ");
 					oficio = sc.next();
-
+					System.out.println(oficio);
+					
 					// Petición salario
 					while (salario <= 0) {
 						System.out.print("Salario: ");
@@ -127,7 +129,6 @@ public class ejercicio7_3 {
 			System.out.println("Departamento con más empleados: " + nombreDepartamentoMax);
 			System.out.println("Número de empleados en el departamento: " + numMaxEmpleados);
 			System.out.println("Número total de departamentos introducidos: " + nDepartamentos);
-
 		} while (nDepartamentos > 0);
 	}
 }

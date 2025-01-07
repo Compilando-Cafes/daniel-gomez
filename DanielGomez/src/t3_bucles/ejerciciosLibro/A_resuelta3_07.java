@@ -8,6 +8,7 @@ public class A_resuelta3_07 {
 		for (int i = 0; i <= 100; i += 7) {
 			//System.out.print(i + " ");
 			System.out.print(resultado = " " + i);
+			System.out.println(resultado);
 		}
 	}
 }

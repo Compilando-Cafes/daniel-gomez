@@ -21,5 +21,6 @@ public class Resuelta2_06 {
             System.out.println(n2 + " es mayor que " + n1);
          }
       }
+      sc.close();
    }
 }

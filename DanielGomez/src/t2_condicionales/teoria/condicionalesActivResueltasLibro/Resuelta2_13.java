@@ -31,5 +31,6 @@ public class Resuelta2_13 {
 	         }
 	      }
 	      System.out.println("Hora + 1 segundo: " + h + ":" + m + ":" + s);
+		  sc.close();
    }
 }

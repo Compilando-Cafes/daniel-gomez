@@ -3,7 +3,7 @@ package t2_condicionales.teoria.condicionalesActivResueltasLibro;
 import java.util.Scanner;
 
 public class Resuelta2_03 {
-	
+
    public static void main(String[] args) {
       Scanner sc = new Scanner(System.in);
 
@@ -17,5 +17,7 @@ public class Resuelta2_03 {
       } else {
          System.out.println(n2 + " es mayor que " + n1);
       }
+
+      sc.close();
    }
 }

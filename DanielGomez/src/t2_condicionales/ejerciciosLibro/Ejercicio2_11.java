@@ -14,6 +14,7 @@ public class Ejercicio2_11 {
 		n = sc.nextInt();
 		sc.nextLine();
 		
+		System.out.println(n);
 
 		sc.close();
 	}

@@ -55,6 +55,7 @@ public class datosAlumnos {
 		System.out.println("Número en curso 1: " + cursoUno);
 		System.out.println("Número en curso 2: " + cursoDos);
 		System.out.println("Número en curso 3: " + cursoTres);
+		System.out.println(nombre);
 		
 	}
 

@@ -26,5 +26,7 @@ public class Main4_4 {
       int b = sc.nextInt();
 
       System.out.println("El número mayor es: " + maximo(a, b));
+      sc.close();
+
    }
 }

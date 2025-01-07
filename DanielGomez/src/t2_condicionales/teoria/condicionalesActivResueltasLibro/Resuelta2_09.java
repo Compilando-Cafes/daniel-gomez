@@ -21,5 +21,6 @@ public class Resuelta2_09 {
       } else if (num < 100000) {
          System.out.println("Tiene 5 cifras");
       }
+      sc.close();
    }
 }

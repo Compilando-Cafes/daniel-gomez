@@ -44,7 +44,7 @@ public class resuelta2_10_b {
 		default:
 			System.out.println("Error: nota no v�lida");
 		}
-		
+		sc.close();
 		
 		
 		

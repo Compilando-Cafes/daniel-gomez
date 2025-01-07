@@ -33,6 +33,7 @@ public class Main10 {
 		
 		resultado = irABiblioteca == true || (lloviendo == false && tareasTerminadas == true);
 		System.out.println("Resultado: " + resultado);
+		sc.close();
 			
 		
 		                                                                                                       

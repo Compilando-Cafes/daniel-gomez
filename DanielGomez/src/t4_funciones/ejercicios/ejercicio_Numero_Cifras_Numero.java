@@ -19,6 +19,8 @@ public class ejercicio_Numero_Cifras_Numero {
 		sc.nextLine();
 
 		System.out.println("Tiene: " + numeroCifras(n) + " cifras.");
+		sc.close();
+
 	}
 
 	public static int numeroCifras(int n) {
