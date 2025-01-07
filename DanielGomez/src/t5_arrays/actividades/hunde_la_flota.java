@@ -13,6 +13,8 @@ public class hunde_la_flota {
 	static final String FALLO = "\u274C";
 
 	public static void main(String[] args) {
+		// Juego de hundir la flota
+		System.out.println("Daniel Gómez Delgado");
 
 		System.out.println("""
 				=======================================================
