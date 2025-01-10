@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class ClaseCaracter {
     static Scanner sc = new Scanner(System.in);
+
     public static void main(String[] args) {
         char[] listaCaracteresUsuario = new char[15];
         int tamanoListaNumeros = 0;
@@ -17,36 +18,37 @@ public class ClaseCaracter {
         char[] listaEspaciosVacios = new char[tamanoListaEspaciosVacios];
 
         for (int i = 0; i < 15; i++) {
-            System.out.print("Carácter número " + (i+1) + ": ");
+            System.out.print("Carácter número " + (i + 1) + ": ");
             char caracter = sc.next().charAt(0);
             listaCaracteresUsuario[i] = caracter;
 
             // Comprobar si es número y añadirlo
-            if (Character.isDigit(caracter)){
+            if (Character.isDigit(caracter)) {
                 tamanoListaNumeros++;
                 listaNumeros = Arrays.copyOf(listaNumeros, tamanoListaNumeros);
-                listaNumeros[tamanoListaNumeros-1] = caracter;
+                listaNumeros[tamanoListaNumeros - 1] = caracter;
             }
 
             // Comprobar si es letra y añadirlo
-            if (Character.isLetter(caracter)){
+            if (Character.isLetter(caracter)) {
                 tamanoListaLetras++;
                 listaLetras = Arrays.copyOf(listaLetras, tamanoListaLetras);
-                listaLetras[tamanoListaLetras-1] = caracter;
+                listaLetras[tamanoListaLetras - 1] = caracter;
             }
 
+
             // Comprobar si es número o letra y añadirlo
-            if (Character.isLetterOrDigit(caracter)){
+            if (Character.isLetterOrDigit(caracter)) {
                 tamanoListaNumerosYLetras++;
                 listaNumerosYLetras = Arrays.copyOf(listaNumerosYLetras, tamanoListaNumerosYLetras);
-                listaNumerosYLetras[tamanoListaNumerosYLetras-1] = caracter;
+                listaNumerosYLetras[tamanoListaNumerosYLetras - 1] = caracter;
             }
 
             // Comprobar si es espacio vacío y añadirlo
-            if (Character.isWhitespace(caracter)){
+            if (Character.isWhitespace(caracter)) {
                 tamanoListaEspaciosVacios++;
                 listaEspaciosVacios = Arrays.copyOf(listaEspaciosVacios, tamanoListaEspaciosVacios);
-                listaEspaciosVacios[tamanoListaEspaciosVacios-1] = caracter;
+                listaEspaciosVacios[tamanoListaEspaciosVacios - 1] = caracter;
             }
         }
 
