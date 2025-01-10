@@ -1,0 +1,13 @@
+# Configuración específica de IntelliJ IDEA
+.idea/
+out/
+
+# Configuración específica de Eclipse
+.settings/
+.classpath
+.project
+
+# Otros archivos que podrían generarse
+*.log
+*.iml
+*.class
