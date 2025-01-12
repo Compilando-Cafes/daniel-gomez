@@ -1,8 +1,13 @@
 package t6_cadenas_caracteres.teoria;
 
+import java.util.Scanner;
+
 public class SeparaPalabras {
+    static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-        String frase = "En un lugar de la Mancha";
+        System.out.print("Dime una frase y la mostraré sin espacios y separada por palabras: ");
+        String frase = sc.nextLine();
+
         System.out.println("Frase: " + frase);
         cambiarCadena(frase);
     }

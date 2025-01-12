@@ -1,12 +1,18 @@
 package t6_cadenas_caracteres.teoria;
 
+import java.util.Scanner;
+
 public class InvierteFrases {
+    static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-        String frase = "Hola mundo";
+        System.out.print("Dime una frase y le daré la vuelta: ");
+        String frase = sc.nextLine();
+
         System.out.println("Frase:");
         System.out.println("\t" + frase);
+
         System.out.println("Frase al revés:");
-        System.out.println("\t" + invertirFrase("Hola mundo"));
+        System.out.println("\t" + invertirFrase(frase));
     }
 
     public static String invertirFrase(String frase) {
