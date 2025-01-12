@@ -21,8 +21,14 @@ public class Unicode {
         int codePoint = 0xFFFF;
 
         for (int i =0x0000; i<=0xFFFF;i++) {
-            System.out.println(Integer.toHexString(i) + " " + (char)i);
+            System.out.println(i + ": " +Integer.toHexString(i) + " " + (char)i);
         }
 
-    }
+        for (int i =0x0000; i<=0xFFFF;i++) {
+            if (Character.isLetterOrDigit(i)&& !Character.isISOControl(i)) {
+                System.out.printf("U+%04X %c ", (int)i, i);
+            }
+        }
+
+        }
 }
