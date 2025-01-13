@@ -45,5 +45,38 @@ public class ClaseString {
         // Caracteres no imprimibles
         palabra.trim();
 
+        // Buscar. Devuelve la posición si lo encuentra y -1 si no
+        palabra.indexOf('m');
+
+        // Buscar un substring en un string
+        palabra.indexOf("Hola");
+
+        // Busca a partir de un indice
+        palabra.indexOf('m', 3);
+        palabra.indexOf("Hola", 3);
+
+        // Buscar desde el final con las mismas opciones que el anterior
+        palabra.lastIndexOf('m');
+
+        // Si está vacía
+        palabra.isEmpty();
+
+        // Si contiene un String independientemente de si después hay más cosas o no
+        palabra.contains("hola");
+
+        // Empieza por y termina por
+        palabra.startsWith("Hola");
+        palabra.endsWith(" mundo");
+
+        // Convertir a mayúsculas
+        palabra.toLowerCase();
+        palabra.toUpperCase();
+
+        // Convertir todas lo que haya de algo que le digamos por lo que le digamos
+        palabra.replace('a', 'e');
+
+        // Separar cadenas guardándolo en un array
+        String[] cadena = palabra.split("-");
+
     }
 }
