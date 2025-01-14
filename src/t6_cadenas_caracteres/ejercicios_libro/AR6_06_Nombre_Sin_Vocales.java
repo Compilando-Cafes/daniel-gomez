@@ -30,6 +30,5 @@ public class AR6_06_Nombre_Sin_Vocales {
             resultado = true;
         }
         return resultado;
-
     }
 }

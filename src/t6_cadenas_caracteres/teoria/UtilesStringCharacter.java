@@ -1,6 +1,6 @@
 package t6_cadenas_caracteres.teoria;
 
-public class UtilesClaseString {
+public class UtilesStringCharacter {
     public static void main(String[] args) {
 
     }
@@ -12,6 +12,16 @@ public class UtilesClaseString {
             if (!Character.isLetter(cadena.charAt(i))) {
                 resultado = -1;
             }
+        }
+        return resultado;
+    }
+
+    private static boolean esVocal(char caracter) {
+        boolean resultado = false;
+        String vocales = "aeiouáéíóú";
+        caracter = Character.toLowerCase(caracter);
+        if (vocales.indexOf(caracter) >= 0) {
+            resultado = true;
         }
         return resultado;
     }
