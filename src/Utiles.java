@@ -62,4 +62,14 @@ public class Utiles {
             }
         }
     }
+
+    private static boolean esVocal(char caracter) {
+        boolean resultado = false;
+        String vocales = "aeiouáéíóú";
+        caracter = Character.toLowerCase(caracter);
+        if (vocales.indexOf(caracter) >= 0) {
+            resultado = true;
+        }
+        return resultado;
+    }
 }

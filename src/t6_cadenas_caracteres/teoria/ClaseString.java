@@ -78,5 +78,9 @@ public class ClaseString {
         // Separar cadenas guardándolo en un array
         String[] cadena = palabra.split("-");
 
+        // Convertir un array de Strings en un solo String
+        String[] array = {"Hola", "mundo"};
+        String cadena2 = String.valueOf(array);
+
     }
 }
