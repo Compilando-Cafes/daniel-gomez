@@ -1,8 +1,6 @@
 package t6_cadenas_caracteres.teoria;
 
-import java.util.Arrays;
-
-public class Ejercicio4_String_Frase_Numeros_Espacios {
+public class Ejercicio_String_Frase_Numeros_Espacios {
     public static void main(String[] args) {
         String cadena = "EsTo3eS4mUy6uTiL";
         System.out.println("La suma de los números es: " + secuenciaNumerosLetras(cadena));
