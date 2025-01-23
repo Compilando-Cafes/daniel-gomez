@@ -11,6 +11,7 @@ public class nomenclaturaCamel {
     }
 
     public static String camel(String frase) {
+        // Poner frase en minúsculas
         frase = frase.toLowerCase();
 
         // Quitar los espacios al comienzo
