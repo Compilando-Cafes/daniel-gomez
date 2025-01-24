@@ -85,16 +85,19 @@ public class Main {
                     System.out.print("Nota final de la práctica: ");
                     practicas[i].notaFinal = sc.nextDouble();
                 }
-
-
             }
         }
+
+        // Mostrar datos de cada alumno
         for (int i = 0; i< alumno.length; i++){
             System.out.print("Identificador alumno " + (i+1) + ": " + alumno[i].identificador);
             System.out.print("Nombre: " + alumno[i].nombre);
             System.out.print("Apellidos: " + alumno[i].apellidos);
             System.out.print("Nota media: " + alumno[i].notaMedia);
             System.out.print("Año de matriculación: " + alumno[i].anoMatriculacion);
+            if (practicas[i].cif.isEmpty()){
+
+            }
             System.out.println();
         }
     }
