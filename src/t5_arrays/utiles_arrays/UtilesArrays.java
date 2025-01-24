@@ -2,7 +2,7 @@ package t5_arrays.utiles_arrays;
 
 import java.util.Arrays;
 
-public class utiles_arrays {
+public class UtilesArrays {
 
 	// Función para mostrar una tabla [-,-,-,-]
 	public static void mostrarArray(int[] array) {
@@ -99,7 +99,7 @@ public class utiles_arrays {
 		}
 	}
 
-	// Funcion que recibe un array y lo invierte
+	// Funcion que recibe un array y lo invierte, lo pone al revés, le da la vuelta.
 	public static void invertirArray(int[] array) {
 		for (int i = 0; i < array.length / 2; i++) {
 			int aux = array[i];
