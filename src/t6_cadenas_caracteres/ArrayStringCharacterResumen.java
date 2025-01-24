@@ -1,9 +1,8 @@
 package t6_cadenas_caracteres;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
-public class StringCharacterResumen {
+public class ArrayStringCharacterResumen {
     public static void main(String[] args) {
         char caracter = 'a';
         String cadena = "";
