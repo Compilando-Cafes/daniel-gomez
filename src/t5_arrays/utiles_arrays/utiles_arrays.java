@@ -4,6 +4,41 @@ import java.util.Arrays;
 
 public class utiles_arrays {
 
+	// Función para mostrar una tabla [-,-,-,-]
+	public static void mostrarArray(int[] array) {
+		System.out.println(Arrays.toString(array));
+	}
+
+	// Función para mostrar una tabla con for each
+	public static void mostrarArrayForEach(int[] array) {
+		for (int num : array) {
+			System.out.print(num + " ");
+		}
+		System.out.println();
+	}
+
+	// Función para mostrar una tabla con for
+	public static void mostrarArrayFor(int[] array) {
+		for (int i = 0; i < array.length; i++) {
+			System.out.print(array[i] + " ");
+		}
+		System.out.println();
+	}
+
+	// Función para buscar en una tabla con while que devuelve la posición o -1 si no lo encuentra
+	public static int buscarEnArrayPosicion(int[] array, int valor) {
+		int i = 0;
+		while (i < array.length && array[i] != valor) {
+			i++;
+		}
+		if (i < array.length) {
+			return i;
+		} else {
+			return -1;
+		}
+	}
+
+
 	// Funcion que recibe un array y lo ordena directamente con sort
 	public static void ordenarArray(int[] array) {
 		Arrays.sort(array);
@@ -19,6 +54,48 @@ public class utiles_arrays {
 					array[j] = aux;
 				}
 			}
+		}
+	}
+
+	// Buscar en una tabla con binarySearch
+	public static int buscarEnArray(int[] array, int valor) {
+		return Arrays.binarySearch(array, valor);
+	}
+
+	// Función para insertar algo en una tabla ordenada con System.arraycopy
+	public static void insertarEnArrayOrdenadoConSystem(int[] array, int valor) {
+		int posicion = Arrays.binarySearch(array, valor);
+		if (posicion < 0) {
+			posicion = -posicion - 1;
+			array = Arrays.copyOf(array, array.length + 1);
+			System.arraycopy(array, posicion, array, posicion + 1, array.length - posicion - 1);
+			array[posicion] = valor;
+		}
+	}
+
+	// Función para insertar algo en una tabla no ordenada, al final
+	public static void insertarEnArray(int[] array, int valor) {
+		array = Arrays.copyOf(array, array.length + 1);
+		array[array.length - 1] = valor;
+	}
+
+	// Función para eliminar un elemento en una tabla no ordenada
+	public static void eliminarEnArray(int[] array, int valor) {
+		int posicion = Arrays.binarySearch(array, valor);
+		if (posicion >= 0) {
+			for (int i = posicion; i < array.length - 1; i++) {
+				array[i] = array[i + 1];
+			}
+			array = Arrays.copyOf(array, array.length - 1);
+		}
+	}
+
+	// Función para eliminar un elemento en una tabla ordenada
+	public static void eliminarEnArrayOrdenado(int[] array, int valor) {
+		int posicion = Arrays.binarySearch(array, valor);
+		if (posicion >= 0) {
+			System.arraycopy(array, posicion + 1, array, posicion, array.length - posicion - 1);
+			array = Arrays.copyOf(array, array.length - 1);
 		}
 	}
 
