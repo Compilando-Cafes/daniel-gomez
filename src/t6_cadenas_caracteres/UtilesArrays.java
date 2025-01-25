@@ -38,7 +38,6 @@ public class UtilesArrays {
 		}
 	}
 
-
 	// Funcion que recibe un array y lo ordena directamente con sort
 	public static void ordenarArray(int[] array) {
 		Arrays.sort(array);
@@ -238,6 +237,23 @@ public class UtilesArrays {
 			System.out.print(Arrays.toString(array[i]));
 		}
 		System.out.println();
+	}
+	// Función para mostrar el mayor y menor de un array bidimensional
+	public static void mayorMenorMatrizBidimensional(int[][] matriz) {
+		int mayor = matriz[0][0];
+		int menor = matriz[0][0];
+		for (int i = 0; i < matriz.length; i++) {
+			for (int j = 0; j < matriz[i].length; j++) {
+				if (matriz[i][j] > mayor) {
+					mayor = matriz[i][j];
+				}
+				if (matriz[i][j] < menor) {
+					menor = matriz[i][j];
+				}
+			}
+		}
+		System.out.println("El mayor valor de la matriz es: " + mayor);
+		System.out.println("El menor valor de la matriz es: " + menor);
 	}
 
 	// Función para eliminar duplicados de un array
@@ -494,6 +510,16 @@ public class UtilesArrays {
 			}
 		}
 		return matrizRotada;
+	}
+	// Función que transpone una matriz bidimensional o le cambia las filas por las columnas
+	public static int[][] transponerMatriz(int[][] matriz) {
+		int[][] matrizTranspuesta = new int[matriz[0].length][matriz.length];
+		for (int i = 0; i < matrizTranspuesta.length; i++) {
+			for (int j = 0; j < matrizTranspuesta[i].length; j++) {
+				matrizTranspuesta[i][j] = matriz[j][i];
+			}
+		}
+		return matrizTranspuesta;
 	}
 
 }

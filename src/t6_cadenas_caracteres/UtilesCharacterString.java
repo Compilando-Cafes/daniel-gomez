@@ -89,7 +89,7 @@ public class UtilesCharacterString {
     public static int[] contarCadaVocal(String cadena) {
         int[] contador = new int[5];
         for (int i = 0; i < cadena.length(); i++) {
-            switch (cadena.charAt(i)){
+            switch (cadena.charAt(i)) {
                 case 'a' -> contador[0]++;
                 case 'e' -> contador[1]++;
                 case 'i' -> contador[2]++;
@@ -126,7 +126,7 @@ public class UtilesCharacterString {
         cadena = cadena.toLowerCase();
         int[] contador = new int[5];
         for (int i = 0; i < cadena.length(); i++) {
-            switch (cadena.charAt(i)){
+            switch (cadena.charAt(i)) {
                 case 'a', 'á' -> contador[0]++;
                 case 'e', 'é' -> contador[1]++;
                 case 'i', 'í' -> contador[2]++;
@@ -271,6 +271,122 @@ public class UtilesCharacterString {
         return valido;
     }
 
+    // Función para validar una fecha
+    public static boolean validarFecha(String fecha) {
+        boolean valido = false;
+        if (fecha.length() == 10 && esNumero(fecha.charAt(0)) && esNumero(fecha.charAt(1)) && fecha.charAt(2) == '/' && esNumero(fecha.charAt(3)) && esNumero(fecha.charAt(4)) && fecha.charAt(5) == '/' && esNumero(fecha.charAt(6)) && esNumero(fecha.charAt(7)) && esNumero(fecha.charAt(8)) && esNumero(fecha.charAt(9)) && Integer.parseInt(fecha.substring(0, 2)) <= 31 && Integer.parseInt(fecha.substring(3, 5)) <= 12) {
+            valido = true;
+        }
+        return valido;
+    }
+
+    // Función para validar una hora
+    public static boolean validarHora(String hora) {
+        boolean valido = false;
+        if (hora.length() == 5 && esNumero(hora.charAt(0)) && esNumero(hora.charAt(1)) && hora.charAt(2) == ':' && esNumero(hora.charAt(3)) && esNumero(hora.charAt(4)) && Integer.parseInt(hora.substring(0, 2)) <= 23 && Integer.parseInt(hora.substring(3, 5)) <= 59) {
+            valido = true;
+        }
+        return valido;
+    }
+
+    // Funcion para validar una URL
+    public static boolean validarURL(String url) {
+        boolean valido = false;
+        if (url.indexOf("http://") != -1 || url.indexOf("https://") != -1) {
+            valido = true;
+        }
+        return valido;
+    }
+
+    // Función para validar un código postal
+    public static boolean validarCodigoPostal(String cp) {
+        boolean valido = false;
+        if (cp.length() == 5 && esNumero(cp.charAt(0)) && esNumero(cp.charAt(1)) && esNumero(cp.charAt(2)) && esNumero(cp.charAt(3)) && esNumero(cp.charAt(4))) {
+            valido = true;
+        }
+        return valido;
+    }
+
+    // Función para validar una IP
+    public static boolean validarIP(String ip) {
+        boolean valido = false;
+        if (ip.length() == 15 && esNumero(ip.charAt(0)) && esNumero(ip.charAt(1)) && esNumero(ip.charAt(2)) && ip.charAt(3) == '.' && esNumero(ip.charAt(4)) && esNumero(ip.charAt(5)) && esNumero(ip.charAt(6)) && ip.charAt(7) == '.' && esNumero(ip.charAt(8)) && esNumero(ip.charAt(9)) && esNumero(ip.charAt(10)) && ip.charAt(11) == '.' && esNumero(ip.charAt(12)) && esNumero(ip.charAt(13)) && esNumero(ip.charAt(14)) && Integer.parseInt(ip.substring(0, 3)) <= 255 && Integer.parseInt(ip.substring(4, 7)) <= 255 && Integer.parseInt(ip.substring(8, 11)) <= 255 && Integer.parseInt(ip.substring(12, 15)) <= 255) {
+            valido = true;
+        }
+        return valido;
+    }
+
+    // Función para validar una contraseña: 8 caracteres, 1 mayúscula, 1 minúscula, 1 número y 1 carácter especial
+    public static boolean validarContrasena(String contrasena) {
+        boolean valido = false;
+        if (contrasena.length() >= 8) {
+            boolean mayuscula = false;
+            boolean minuscula = false;
+            boolean numero = false;
+            boolean caracterEspecial = false;
+            for (int i = 0; i < contrasena.length(); i++) {
+                if (Character.isUpperCase(contrasena.charAt(i))) {
+                    mayuscula = true;
+                }
+                if (Character.isLowerCase(contrasena.charAt(i))) {
+                    minuscula = true;
+                }
+                if (Character.isDigit(contrasena.charAt(i))) {
+                    numero = true;
+                }
+                if (!Character.isLetterOrDigit(contrasena.charAt(i))) {
+                    caracterEspecial = true;
+                }
+            }
+            if (mayuscula && minuscula && numero && caracterEspecial) {
+                valido = true;
+            }
+        }
+        return valido;
+    }
+
+    // Función para validar una contraseña: 8 caracteres, 1 mayúscula, 1 minúscula, 1 número y 1 carácter especial
+    // Debe indicar la razón por la que no es válida. Sin usar matches
+    public static boolean validarContrasenaCompleta(String contrasena) {
+        if (contrasena.length() < 8) {
+            System.out.println("La contraseña debe tener al menos 8 caracteres.");
+            return false;
+        }
+        boolean tieneMayuscula = false;
+        boolean tieneMinuscula = false;
+        boolean tieneNumero = false;
+        boolean tieneCaracterEspecial = false;
+        for (int i = 0; i < contrasena.length(); i++) {
+            char caracter = contrasena.charAt(i);
+            if (Character.isUpperCase(caracter)) {
+                tieneMayuscula = true;
+            } else if (Character.isLowerCase(caracter)) {
+                tieneMinuscula = true;
+            } else if (Character.isDigit(caracter)) {
+                tieneNumero = true;
+            } else if (!Character.isLetterOrDigit(caracter)) {
+                tieneCaracterEspecial = true;
+            }
+        }
+        if (!tieneMayuscula) {
+            System.out.println("La contraseña debe tener al menos una mayúscula.");
+            return false;
+        }
+        if (!tieneMinuscula) {
+            System.out.println("La contraseña debe tener al menos una minúscula.");
+            return false;
+        }
+        if (!tieneNumero) {
+            System.out.println("La contraseña debe tener al menos un número.");
+            return false;
+        }
+        if (!tieneCaracterEspecial) {
+            System.out.println("La contraseña debe tener al menos un carácter especial.");
+            return false;
+        }
+        return true;
+    }
+
     // Función para comprobar si dos palabras son anagramas (mismas letras) (amor-roma)
     public static boolean sonAnagramas(String palabra1, String palabra2) {
         boolean anagrama = false;
@@ -287,4 +403,60 @@ public class UtilesCharacterString {
         return anagrama;
     }
 
+    // Función para contar el número de caracteres alfanuméricos de un String
+    public static void numeroCaracteresAlfabeticos(String texto) {
+        int contador = 0;
+        for (int i = 0; i < texto.length(); i++) {
+            if (Character.isLetter(texto.charAt(i))) {
+                contador++;
+            }
+        }
+        System.out.println("Número de letras: " + contador);
+    }
+
+    // Función para contar el número de dígitos o números de un String
+    public static void numeroDigitos(String texto) {
+        int contador = 0;
+        for (int i = 0; i < texto.length(); i++) {
+            if (Character.isDigit(texto.charAt(i))) {
+                contador++;
+            }
+        }
+        System.out.println("Número de dígitos: " + contador);
+    }
+
+    // Función para contar el número de espacios en blanco de un String
+    public static void numeroEspacios(String texto) {
+        int contador = 0;
+        for (int i = 0; i < texto.length(); i++) {
+            if (Character.isWhitespace(texto.charAt(i))) {
+                contador++;
+            }
+        }
+        System.out.println("Número de espacios: " + contador);
+    }
+
+    // Función para contar el número de caracteres especiales de un String
+    public static void numeroCaracteresEspeciales(String texto) {
+        int contador = 0;
+        for (int i = 0; i < texto.length(); i++) {
+            if (!Character.isLetterOrDigit(texto.charAt(i)) && !Character.isWhitespace(texto.charAt(i))) {
+                contador++;
+            }
+        }
+        System.out.println("Número de caracteres especiales: " + contador);
+    }
+
+    // Función para poner en mayúsculas los caracteres alfabéticos de un String
+    public static void caracteresAlfabeticosMayusculas(String texto) {
+        String textoMayusculas = "";
+        for (int i = 0; i < texto.length(); i++) {
+            if (Character.isLetter(texto.charAt(i))) {
+                textoMayusculas += Character.toUpperCase(texto.charAt(i));
+            } else {
+                textoMayusculas += texto.charAt(i);
+            }
+        }
+        System.out.println("Texto en mayúsculas: " + textoMayusculas);
+    }
 }
