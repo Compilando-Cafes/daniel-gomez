@@ -363,6 +363,20 @@ public class UtilesArrays {
 		return ordenado;
 	}
 
+	public static int[] contarCadaVocal(String cadena) {
+		int[] contador = new int[5];
+		for (int i = 0; i < cadena.length(); i++) {
+			switch (cadena.charAt(i)){
+				case 'a' -> contador[0]++;
+				case 'e' -> contador[1]++;
+				case 'i' -> contador[2]++;
+				case 'o' -> contador[3]++;
+				case 'u' -> contador[4]++;
+			}
+		}
+		return contador;
+	}
+
 	// Función para contar ocurrencias de un valor en un array
 	public static int contarOcurrenciasArray(int[] array, int valor) {
 		int contador = 0;
@@ -393,6 +407,21 @@ public class UtilesArrays {
 				array[i] = valor2;
 			}
 		}
+	}
+
+	public static int[] contarCadaVocalMayusMinusAcentos(String cadena) {
+		cadena = cadena.toLowerCase();
+		int[] contador = new int[5];
+		for (int i = 0; i < cadena.length(); i++) {
+			switch (cadena.charAt(i)){
+				case 'a', 'á' -> contador[0]++;
+				case 'e', 'é' -> contador[1]++;
+				case 'i', 'í' -> contador[2]++;
+				case 'o', 'ó' -> contador[3]++;
+				case 'u', 'ú' -> contador[4]++;
+			}
+		}
+		return contador;
 	}
 
 	// Función para contar los valores pares y los impares de un array

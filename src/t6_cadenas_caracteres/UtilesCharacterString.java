@@ -86,6 +86,20 @@ public class UtilesCharacterString {
         return contador;
     }
 
+    public static int[] contarCadaVocal(String cadena) {
+        int[] contador = new int[5];
+        for (int i = 0; i < cadena.length(); i++) {
+            switch (cadena.charAt(i)){
+                case 'a' -> contador[0]++;
+                case 'e' -> contador[1]++;
+                case 'i' -> contador[2]++;
+                case 'o' -> contador[3]++;
+                case 'u' -> contador[4]++;
+            }
+        }
+        return contador;
+    }
+
     // Función que cuenta números de un String
     public static int contarNumeros(String cadena) {
         int contador = 0;
@@ -108,8 +122,23 @@ public class UtilesCharacterString {
         return contador;
     }
 
-    // Función que comprueba si una cadena es un palíndromo sin usar ninguna otra funcion
-    public static boolean esPalindromoSinFuncion(String cadena) {
+    public static int[] contarCadaVocalMayusMinusAcentos(String cadena) {
+        cadena = cadena.toLowerCase();
+        int[] contador = new int[5];
+        for (int i = 0; i < cadena.length(); i++) {
+            switch (cadena.charAt(i)){
+                case 'a', 'á' -> contador[0]++;
+                case 'e', 'é' -> contador[1]++;
+                case 'i', 'í' -> contador[2]++;
+                case 'o', 'ó' -> contador[3]++;
+                case 'u', 'ú' -> contador[4]++;
+            }
+        }
+        return contador;
+    }
+
+    // Función que comprueba si una cadena es un palíndromo quitando los espacios
+    public static boolean esPalindromo(String cadena) {
         boolean palindromo = true;
         for (int i = 0; i < cadena.length() / 2; i++) {
             if (cadena.charAt(i) != cadena.charAt(cadena.length() - 1 - i)) {

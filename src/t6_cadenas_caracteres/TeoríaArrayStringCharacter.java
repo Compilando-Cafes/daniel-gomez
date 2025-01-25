@@ -2,7 +2,7 @@ package t6_cadenas_caracteres;
 
 import java.util.Arrays;
 
-public class ArrayStringCharacterResumen {
+public class TeoríaArrayStringCharacter {
     public static void main(String[] args) {
         char caracter = 'a';
         String cadena = "";
