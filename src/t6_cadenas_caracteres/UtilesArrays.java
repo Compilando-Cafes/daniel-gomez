@@ -1,4 +1,4 @@
-package t5_arrays.utiles_arrays;
+package t6_cadenas_caracteres;
 
 import java.util.Arrays;
 
