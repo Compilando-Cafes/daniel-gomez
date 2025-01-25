@@ -108,6 +108,15 @@ public class UtilesArrays {
 		}
 	}
 
+	// Función que invierte una cadena y lo que tiene también
+	public static String invertirCadena(String cadena) {
+		String invertida = "";
+		for (int i = cadena.length() - 1; i >= 0; i--) {
+			invertida += cadena.charAt(i);
+		}
+		return invertida;
+	}
+
 	// Funcion que borra una posicion de un array
 	public static void borrarPosicionArray(int[] array, int posicion) {
 		for (int i = posicion; i < array.length - 1; i++) {
