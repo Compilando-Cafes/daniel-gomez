@@ -459,4 +459,28 @@ public class UtilesCharacterString {
         }
         System.out.println("Texto en mayúsculas: " + textoMayusculas);
     }
+
+    // Función que genera un Acrónimo de todas las palabras de un frase dada
+    public static void acronimo(String frase) {
+        String acronimo = "";
+        acronimo += Character.toUpperCase(frase.charAt(0));
+        for (int i = 1; i < frase.length(); i++) {
+            if (frase.charAt(i) == ' ') {
+                acronimo += Character.toUpperCase(frase.charAt(i + 1));
+            }
+        }
+        System.out.println("Acrónimo: " + acronimo);
+    }
+
+    // Función que hace un acrónimo de una frase de todas las palabras que estén en mayúsculas
+    public static void acronimoMayusculas(String frase) {
+        String acronimo = "";
+        for (int i = 0; i < frase.length(); i++) {
+            if (Character.isUpperCase(frase.charAt(i))) {
+                acronimo += frase.charAt(i);
+            }
+        }
+        System.out.println("Acrónimo: " + acronimo);
+    }
+
 }
