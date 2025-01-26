@@ -140,4 +140,9 @@ public class UtilesPedirNumerosMenus {
             }
         }
     }
+
+    // Función para pedir un número aleatorio entre un rango
+    public static int pedirNumeroAleatorio(int minimo, int maximo) {
+        return (int) (Math.random() * (maximo - minimo + 1) + minimo);
+    }
 }

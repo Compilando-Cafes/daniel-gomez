@@ -5,8 +5,7 @@ import java.util.Arrays;
 public class UtilesArrays {
 
 	// Función para mostrar una tabla [-,-,-,-]
-	public static void mostrarArray(int[] array) {
-		System.out.println(Arrays.toString(array));
+	public static void mostrarArray(int[] array) {System.out.println(Arrays.toString(array));
 	}
 
 	// Función para mostrar una tabla con for each
@@ -23,6 +22,16 @@ public class UtilesArrays {
 			System.out.print(array[i] + " ");
 		}
 		System.out.println();
+	}
+
+	// Función para intercambiar una posición de un array por otra dadas, si supera el maximo permitido lo coloca al final.
+	public static void intercambiarPosicionesArray(char[] array, int posicion1, int avance) {
+		int nuevaPosicion = posicion1 + avance;
+		if (nuevaPosicion >= array.length) {
+			nuevaPosicion = array.length - 1;
+		}
+		array[nuevaPosicion] = array[posicion1];
+		array[posicion1] = '.';
 	}
 
 	// Función para buscar en una tabla con while que devuelve la posición o -1 si no lo encuentra
@@ -114,6 +123,24 @@ public class UtilesArrays {
 			invertida += cadena.charAt(i);
 		}
 		return invertida;
+	}
+
+	// Función que da la vuelta a una fila de un array bidimensional
+	public static void invertirFilaArrayBidimensional(int[][] array, int fila) {
+		for (int i = 0; i < array[fila].length / 2; i++) {
+			int aux = array[fila][i];
+			array[fila][i] = array[fila][array[fila].length - 1 - i];
+			array[fila][array[fila].length - 1 - i] = aux;
+		}
+	}
+
+	// Función que da la vuelta a una columna de un array bidimensional
+	public static void invertirColumnaArrayBidimensional(int[][] array, int columna) {
+		for (int i = 0; i < array.length / 2; i++) {
+			int aux = array[i][columna];
+			array[i][columna] = array[array.length - 1 - i][columna];
+			array[array.length - 1 - i][columna] = aux;
+		}
 	}
 
 	// Funcion que borra una posicion de un array
@@ -238,6 +265,17 @@ public class UtilesArrays {
 		}
 		System.out.println();
 	}
+
+	// Función para mostrar un array bidimensional de enteros con un formato de 3 espacios
+	public static void mostrarArrayBidimensionaEnterosConFormatol(int[][] array) {
+		for (int i = 0; i < array.length; i++) {
+			for (int j = 0; j< array.length; j++){
+				System.out.printf("%-3d", array[i][j]);
+			}
+			System.out.println();
+		}
+		System.out.println();
+	}
 	// Función para mostrar el mayor y menor de un array bidimensional
 	public static void mayorMenorMatrizBidimensional(int[][] matriz) {
 		int mayor = matriz[0][0];
@@ -324,6 +362,39 @@ public class UtilesArrays {
 		}
 		return menor;
 	}
+
+	// Función para quitar las palabras repetidas de una frase y mostrarla
+	private static void fraseSinRepeticiones(String frase) {
+		String[] resultado = frase.split(" ");
+		for (int i = 0; i < resultado.length; i++) {
+			for (int j = i + 1; j < resultado.length; j++) {
+				if (resultado[i].equalsIgnoreCase(resultado[j])) {
+					resultado[j] = "";
+				}
+			}
+		}
+		String resultadoString = Arrays.toString(resultado);
+		resultadoString = resultadoString.replace(", ", " ");
+		resultadoString = resultadoString.substring(1, resultadoString.length() - 1);
+		System.out.println(resultadoString);
+	}
+
+	// Función para quitar los números repetidos de una frase y mostrarla
+	private static void fraseSinNumerosRepetidos(String frase) {
+		String[] resultado = frase.split(" ");
+		for (int i = 0; i < resultado.length; i++) {
+			for (int j = i + 1; j < resultado.length; j++) {
+				if (resultado[i].equalsIgnoreCase(resultado[j])) {
+					resultado[j] = "";
+				}
+			}
+		}
+		String resultadoString = Arrays.toString(resultado);
+		resultadoString = resultadoString.replace(", ", " ");
+		resultadoString = resultadoString.substring(1, resultadoString.length() - 1);
+		System.out.println(resultadoString);
+	}
+
 
 	// Función para encontrar la media de un array usando la funcion de sumarArray
 	public static double mediaArray(int[] array) {
@@ -477,7 +548,7 @@ public class UtilesArrays {
 	}
 
 	// Función que calcula si un número es primo
-	private static boolean esPrimo(int numero) {
+	public static boolean esPrimo(int numero) {
 		boolean primo = true;
 		for (int i = 2; i < numero; i++) {
 			if (numero % i == 0) {
