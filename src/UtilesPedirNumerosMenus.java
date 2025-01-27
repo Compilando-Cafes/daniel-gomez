@@ -1,7 +1,9 @@
 import java.util.Scanner;
+import java.util.Random;
 
 public class UtilesPedirNumerosMenus {
     static Scanner sc = new Scanner(System.in);
+
 
     public static void menu() {
         System.out.println("""
@@ -145,4 +147,5 @@ public class UtilesPedirNumerosMenus {
     public static int pedirNumeroAleatorio(int minimo, int maximo) {
         return (int) (Math.random() * (maximo - minimo + 1) + minimo);
     }
+
 }

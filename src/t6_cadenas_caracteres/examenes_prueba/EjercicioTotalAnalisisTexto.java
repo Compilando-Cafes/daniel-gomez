@@ -5,10 +5,11 @@ import java.util.Scanner;
 public class EjercicioTotalAnalisisTexto {
     static Scanner sc = new Scanner(System.in);
     static int controlTextoVacio = 0;
+    static String texto = "";
+
 
     public static void main(String[] args) {
         while (true) {
-            String texto = "";
 
             System.out.println("""
                     ==============================================

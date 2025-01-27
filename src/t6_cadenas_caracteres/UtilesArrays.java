@@ -107,7 +107,7 @@ public class UtilesArrays {
 		}
 	}
 
-	// Funcion que recibe un array y lo invierte, lo pone al revés, le da la vuelta.
+	// Función que recibe un array y lo invierte, lo pone al revés, le da la vuelta.
 	public static void invertirArray(int[] array) {
 		for (int i = 0; i < array.length / 2; i++) {
 			int aux = array[i];
@@ -151,7 +151,7 @@ public class UtilesArrays {
 		array[array.length - 1] = 0;
 	}
 
-	// Funcion que adelanta un puesto en un array siempre que no sea el primero
+	// Función que adelanta un puesto en un array siempre que no sea el primero
 	public static void adelantarPosicionArray(int[] array, int posicion) {
 		if (posicion != 0) {
 			int aux = array[posicion];
@@ -160,7 +160,7 @@ public class UtilesArrays {
 		}
 	}
 
-	// Funcion que lleva al último puesto de la funcion una posición recibida
+	// Función que lleva al último puesto de la funcion una posición recibida
 	public static void llevarAlFinalArray(int[] array, int posicion) {
 		int aux = array[posicion];
 		for (int i = posicion; i < array.length - 1; i++) {
@@ -332,7 +332,7 @@ public class UtilesArrays {
 		return suma;
 	}
 
-	// Funcion para multiplicar todos los elementos de un array
+	// Función para multiplicar todos los elementos de un array
 	public static int multiplicarArray(int[] array) {
 		int producto = 1;
 		for (int i = 0; i < array.length; i++) {
@@ -396,12 +396,12 @@ public class UtilesArrays {
 	}
 
 
-	// Función para encontrar la media de un array usando la funcion de sumarArray
+	// Función para encontrar la media de un array usando la función de sumarArray
 	public static double mediaArray(int[] array) {
 		return (double) sumarArray(array) / array.length;
 	}
 
-	// Funcion para encontrar el máximo y el mínimo de un array
+	// Función para encontrar el máximo y el mínimo de un array
 	public static int[] mayorYMenorArray(int[] array) {
 		int[] mayorYMenor = new int[2];
 		mayorYMenor[0] = array[0];
@@ -592,5 +592,4 @@ public class UtilesArrays {
 		}
 		return matrizTranspuesta;
 	}
-
 }

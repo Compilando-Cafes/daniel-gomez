@@ -28,9 +28,8 @@ public class TeoríaArrayStringCharacter {
         String[] tabla2 = new String[10];
         Arrays.fill(tabla2, "-"); // fill es void, no devuelve nada, no hay que asignarlo a algo.
         Arrays.fill(tabla2, 3, 6, "-"); // rellena desde una posición hasta otra con lo que sea
-
         // Recorrer un array con un for --------------------------------------
-
+        
         // Mostrar una tabla -------------------------------------------------
         System.out.println(tabla2); // Muestra su referencia
         System.out.println(Arrays.toString(tabla2)); // La muestra así: [-,-,-,-,-]
