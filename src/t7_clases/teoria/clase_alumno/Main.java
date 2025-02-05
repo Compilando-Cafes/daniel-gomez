@@ -1,11 +1,16 @@
-package t7_clases.teoria;
+package t7_clases.teoria.clase_alumno;
+
+import t7_clases.teoria.clase_prisma.PrismaPentagonal;
 
 import java.util.Scanner;
+
+
 
 public class Main {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
+        PrismaPentagonal prueba;
 
         // Inicializar tabla con 10 alumnos
         Alumno[] alumno = new Alumno[2];

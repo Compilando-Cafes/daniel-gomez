@@ -1,4 +1,4 @@
-package t7_clases.teoria;
+package t7_clases.teoria.clase_alumno;
 
 public class Practicas {
 
