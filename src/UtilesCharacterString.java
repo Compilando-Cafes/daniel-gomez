@@ -1,5 +1,3 @@
-package t6_cadenas_caracteres;
-
 public class UtilesCharacterString {
 
     // Función que devuelve un booleano si el carácter es una vocal.

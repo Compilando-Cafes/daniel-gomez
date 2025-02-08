@@ -38,11 +38,9 @@ public class Punto {
     }
 
     // Distancia Euclidea
-    public void distanciaEuclidea(Punto punto){
-        double x = punto.x;
-        double y = punto.y;
-        double solucion = Math.sqrt((Math.pow((x*2-x*1),2)) + (Math.pow((y*2-y*1),2)));
-        System.out.printf("La distancia Euclídea entre %,.2f y %,.2f es: %,.2f", x, y ,solucion);
+    public double distanciaEuclidea(Punto punto) {
+        return Math.sqrt(Math.pow(this.x - punto.x, 2) + Math.pow(this.y - punto.y, 2));
     }
+
 
 }

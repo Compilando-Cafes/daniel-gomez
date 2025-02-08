@@ -1,5 +1,3 @@
-package t6_cadenas_caracteres;
-
 import java.util.Arrays;
 
 public class UtilesArrays {

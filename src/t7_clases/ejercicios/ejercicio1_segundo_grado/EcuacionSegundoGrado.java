@@ -52,14 +52,14 @@ public class EcuacionSegundoGrado {
         // Array de soluciones
         double[] soluciones = {0, 0};
 
-        // Calculamos la raíz cuadrada
+        // Calculamos la parte de la raíz cuadrada
         double raizCuadrada = Math.pow(b, 2) - 4 * a * c;
 
         // Si la raíz cuadrada es menor que 0, devolvemos un array vacío
         if (raizCuadrada < 0) {
             return soluciones;
         } else {
-            // Si no devolvemos un array con las soluciones
+            // Si no, un array con las soluciones
             soluciones[0] = (-b + Math.sqrt(raizCuadrada)) / (2 * a);
             soluciones[1] = (-b - Math.sqrt(raizCuadrada)) / (2 * a);
             return soluciones;
