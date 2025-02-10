@@ -23,7 +23,9 @@ public class Main {
                     System.out.println("Eso es, deja el mando y la tele y ve a hacer ejercicios de programación. ;-)");
                     return;
                 }
-                case 0 -> {}
+                case 0 -> {
+                    System.out.println("Introduce un valor entre 1 y 5. -1 para salir.");
+                }
                 case 1 -> {
                     if (television.getEstado().equals(Estado.APAGADO.name())){
                         television.encenderTelevision();

@@ -101,16 +101,24 @@ public class MandoADistancia {
     public void incrementarVolumen() {
         // Comprobar si la televisión está encendida
         if (estado.equals(Estado.ENCENDIDO)) {
-            this.volumen++;
-            System.out.println("Se ha incrementado el volumen a " + getVolumen());
+            if (this.volumen == 100) {
+                System.out.println("Se ha alcanzado el volumen máximo: " + getVolumen());
+            } else {
+                this.volumen++;
+                System.out.println("Se ha incrementado el volumen a " + getVolumen());
+            }
         }
     }
 
     public void disminuirVolumen() {
         // Comprobar si la televisión está encendida
         if (estado.equals(Estado.ENCENDIDO)) {
-            this.volumen--;
-            System.out.println("Se ha disminuido el volumen a " + getVolumen());
+            if (this.volumen == 0) {
+                System.out.println("Se ha alcanzado el volumen mínimo: " + getVolumen());
+            } else {
+                this.volumen--;
+                System.out.println("Se ha disminuido el volumen a " + getVolumen());
+            }
         }
     }
 
@@ -145,5 +153,4 @@ public class MandoADistancia {
         this.estado = Estado.APAGADO;
         System.out.println("El televisor se ha apagado.");
     }
-
 }
