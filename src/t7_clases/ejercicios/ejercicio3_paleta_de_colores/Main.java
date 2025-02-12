@@ -39,8 +39,8 @@ public class Main {
         String[] paletaMonocromatica2 = paleta1.obtenPaletaMonocromatica('c');
         System.out.println("Colores monocromáticos cálidos:");
         mostrarArray(paletaMonocromatica2);
-
     }
+
     public static void mostrarArray(String[] array) {
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + ", ");

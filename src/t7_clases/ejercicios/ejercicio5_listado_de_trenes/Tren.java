@@ -16,10 +16,10 @@ public class Tren {
             this.num_vagones = 1;
 
         // Controlar que el array introducido tenga al menos 2 de longitud, una para la locomotora y otra para un vagón
-        if (informacionVagones.length>1) {
+        if (informacionVagones.length > 1) {
 
             // Crear los vagones. Todos menos la posición cero de información vagones
-            this.vagones = new Vagon[informacionVagones.length-1];
+            this.vagones = new Vagon[informacionVagones.length - 1];
 
             // Obtener los datos de la locomotora del array
             // En la posición 0 del array se guarda: matricula_potencia_anyo
@@ -54,10 +54,10 @@ public class Tren {
             // Obtener los datos de los vagones del array
             // Están en las posiciones del array que no son la cero
             // Crear el array de vagones
-            this.vagones = new Vagon[informacionVagones.length-1];
+            this.vagones = new Vagon[informacionVagones.length - 1];
 
             // Recorrerlo rellenando los datos
-            for (int i = 1; i<vagones.length; i++){
+            for (int i = 1; i < vagones.length; i++) {
                 // Rellenar con los datos por defecto
                 vagones[i] = new Vagon(1, 1, 1, "Mineral");
 
@@ -70,8 +70,8 @@ public class Tren {
                 int posicionFinalCargaActual = informacionVagones[i].lastIndexOf(":");
 
                 cargaMaximaCadena = informacionVagones[i].substring(0, posicionFinalCargaMaxima);
-                cargaActualCadena = informacionVagones[i].substring(posicionFinalCargaMaxima+1, posicionFinalCargaActual);
-                tipoMercancia = informacionVagones[i].substring(posicionFinalCargaActual+1);
+                cargaActualCadena = informacionVagones[i].substring(posicionFinalCargaMaxima + 1, posicionFinalCargaActual);
+                tipoMercancia = informacionVagones[i].substring(posicionFinalCargaActual + 1);
 
                 // Intentar extraer los datos extraídos
                 try {
@@ -94,18 +94,18 @@ public class Tren {
             this.locomotora = new Locomotora("0", 0, 1900);
             // Valores por defecto para un vagón
             this.vagones = new Vagon[1];
-            this.vagones[0] = new Vagon(1, 1,1, "Mineral");
+            this.vagones[0] = new Vagon(1, 1, 1, "Mineral");
         }
 
         Empresa[] empresasPosibles = Empresa.values();
         boolean existe = false;
         for (int i = 0; i < empresasPosibles.length && !existe; i++) {
-            if (empresa.equals(empresasPosibles[i].name())){
+            if (empresa.equals(empresasPosibles[i].name())) {
                 this.empresa = Empresa.valueOf(empresa);
                 existe = true;
             }
         }
-        if (!existe){
+        if (!existe) {
             this.empresa = Empresa.Renfe;
         }
     }
@@ -153,5 +153,18 @@ public class Tren {
 
     public void setLocomotora(Locomotora locomotora) {
         this.locomotora = locomotora;
+    }
+
+    public void revisionDelTren() {
+        System.out.printf("""
+                Tren de la empresa %s
+                    Locomotora con matrícula %s de potencia %d fabricada en el año %d
+                """, empresa, locomotora.getMatricula(), locomotora.getPotencia(), locomotora.getAnyo());
+        for (int i = 1; i < vagones.length; i++) {
+            System.out.println("\tVagón " + vagones[i].getNumeroOrden() +
+                    ": Carga con " + vagones[i].getCargaActual() +
+                    " kilos de " + vagones[i].getTipoMercancia() +
+                    " siendo su carga máxima " + vagones[i].getCargaMaxima());
+        }
     }
 }

@@ -2,7 +2,7 @@ package t7_clases.ejercicios.ejercicio1_segundo_grado;
 
 public class Main {
     public static void main(String[] args) {
-        double a = 1, b = -3, c = 2;
+        double a = 1.752, b = -3, c = 2;
         EcuacionSegundoGrado ecuacion1 = new EcuacionSegundoGrado();
         ecuacion1.setA(a);
         ecuacion1.setB(b);

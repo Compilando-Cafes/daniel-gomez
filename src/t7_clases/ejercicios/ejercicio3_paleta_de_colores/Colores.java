@@ -3,8 +3,7 @@ package t7_clases.ejercicios.ejercicio3_paleta_de_colores;
 import java.util.Arrays;
 
 public class Colores {
-    private String[] coloresCalidos;
-    private String[] coloresFrios;
+    private String[] coloresCalidos;    private String[] coloresFrios;
 
     // Contructor
     Colores() {
@@ -37,6 +36,7 @@ public class Colores {
     public String[] obtenPaletaMixta() {
         String[] paletaMixta = new String[4];
         if (this.coloresCalidos.length > 1 && this.coloresFrios.length > 1) {
+
             // Conseguir dos números aleatorios diferentes
             int pos1 = pedirNumeroAleatorio(0, this.coloresCalidos.length - 1), pos2 = 0;
             boolean repetido = true;
