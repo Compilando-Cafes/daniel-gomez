@@ -590,4 +590,54 @@ public class UtilesArrays {
 		}
 		return matrizTranspuesta;
 	}
+
+
+	// Función que añade un elemento a un array de strings
+	public static String[] anadirElementoArray(String[] array, String elemento) {
+		String[] nuevoArray = Arrays.copyOf(array, array.length + 1);
+		nuevoArray[nuevoArray.length - 1] = elemento;
+		return nuevoArray;
+	}
+
+	// Función que elimina o quita un elemento de un array de strings
+	public static String[] eliminarElementoArray(String[] array, String elemento) {
+		int contador = 0;
+		for (int i = 0; i < array.length; i++) {
+			if (!array[i].equalsIgnoreCase(elemento)) {
+				contador++;
+			}
+		}
+		String[] nuevoArray = new String[contador];
+		contador = 0;
+		for (int i = 0; i < array.length; i++) {
+			if (!array[i].equalsIgnoreCase(elemento)) {
+				nuevoArray[contador] = array[i];
+				contador++;
+			}
+		}
+		return nuevoArray;
+	}
+
+	public static String[] eliminarElemento(String[] array, String elemento) {
+		int index = -1;
+
+		// Buscar el índice del elemento a eliminar
+		for (int i = 0; i < array.length; i++) {
+			if (array[i].equalsIgnoreCase(elemento)) { // Ignora mayúsculas y minúsculas
+				index = i;
+				break;
+			}
+		}
+
+		// Si no se encuentra el elemento, devolver el array sin cambios
+		if (index == -1) {
+			return array;
+		}
+
+		// Mover los elementos una posición atrás
+		System.arraycopy(array, index + 1, array, index, array.length - index - 1);
+
+		// Reducir el tamaño del array
+		return Arrays.copyOf(array, array.length - 1);
+	}
 }
