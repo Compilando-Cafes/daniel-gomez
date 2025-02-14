@@ -1,4 +1,4 @@
-package t7_clases.ejercicios.examen2;
+package t7_clases.ejercicios.examen6_vuelo;
 
 public class Pasajero {
     private String nombre;
@@ -6,6 +6,14 @@ public class Pasajero {
     private String pasaporte;
     private int asiento;
     private boolean conVentana;
+
+    public Pasajero(String nombre, String apellidos, String pasaporte, int asiento, boolean conVentana) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.pasaporte = pasaporte;
+        this.asiento = asiento;
+        this.conVentana = conVentana;
+    }
 
     public String getNombre() {
         return nombre;
@@ -36,10 +44,7 @@ public class Pasajero {
     }
 
     public void setAsiento(int asiento) {
-        if (asiento > 0)
-            this.asiento = asiento;
-        else
-            this.asiento = 1;
+        this.asiento = asiento;
     }
 
     public boolean isConVentana() {
@@ -50,20 +55,9 @@ public class Pasajero {
         this.conVentana = conVentana;
     }
 
-    public Pasajero(String nombre, String apellidos, String pasaporte, int asiento, boolean conVentana) {
-        this.nombre = nombre;
-        this.apellidos = apellidos;
-        this.pasaporte = pasaporte;
-        if (asiento > 0)
-            this.asiento = asiento;
-        else
-            this.asiento = 1;
-        this.conVentana = conVentana;
-    }
-
-    public void mostrarDatos() {
-        System.out.println("El asiento " + asiento + (conVentana ? " con" : " sin") +
-                " ventana está ocupado por el pasajero de nombre " +
-                nombre + ", apellido " + apellidos + " y pasaporte " + pasaporte + ".");
+    public void mostrarDatos(){
+        System.out.println("El asiento " + asiento +
+                (conVentana?" con ": " sin " ) + "ventana está ocupado por el pasajero de nombre " +
+                nombre + ", apellido " + apellidos + " y pasaporte " + pasaporte);
     }
 }

@@ -90,6 +90,21 @@ public class UtilesPedirNumerosMenus {
         }
     }
 
+
+    public static int pedirNumeroEntero() {
+        int numero;
+        while (true) {
+            if (sc.hasNextInt()) {
+                numero = sc.nextInt();
+                sc.nextLine();
+                return numero;
+            } else {
+                System.out.print("Introduce un número válido: ");
+                sc.nextLine();
+            }
+        }
+    }
+
     public static double pedirNumeroDouble(String mensaje, double minimo, double maximo) {
         double numero;
         while (true) {

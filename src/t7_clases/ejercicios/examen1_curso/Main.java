@@ -1,4 +1,4 @@
-package t7_clases.ejercicios.examen1;
+package t7_clases.ejercicios.examen1_curso;
 
 import java.util.Scanner;
 

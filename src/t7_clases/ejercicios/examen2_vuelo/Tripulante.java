@@ -1,4 +1,4 @@
-package t7_clases.ejercicios.examen2;
+package t7_clases.ejercicios.examen2_vuelo;
 
 public class Tripulante {
     enum Rol {PILOTO, SERVICIO, CARGAMENTO}

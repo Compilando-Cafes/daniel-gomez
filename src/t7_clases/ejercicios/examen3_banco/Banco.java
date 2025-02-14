@@ -1,4 +1,4 @@
-package t7_clases.ejercicios.examen3;
+package t7_clases.ejercicios.examen3_banco;
 
 import java.util.Arrays;
 import java.util.Scanner;
