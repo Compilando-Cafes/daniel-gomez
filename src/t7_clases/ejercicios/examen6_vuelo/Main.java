@@ -29,13 +29,13 @@ public class Main {
         m_p.anyadirTripulante("Adela", "CARGAMENTO");
 
 
-        // VARIABLE QUE GUARDA LA OPCION
+        // VARIABLE QUE GUARDA LA OPCIÓN
         int op = -1;
 
         do{
             //MENÚ
             System.out.println();
-            System.out.println("Elija su opcion");
+            System.out.println("Elija su opción");
             System.out.println("1. Eliminar un pasajero por su nombre");
             System.out.println("2. Eliminar un tripulante por su nombre");
             System.out.println("3. Listar tripulantes por rol");
@@ -78,6 +78,5 @@ public class Main {
             }
         }
     }
-
 }
 
