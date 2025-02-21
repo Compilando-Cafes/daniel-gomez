@@ -42,5 +42,4 @@ public class Punto {
         return Math.sqrt(Math.pow(this.x - punto.x, 2) + Math.pow(this.y - punto.y, 2));
     }
 
-
 }

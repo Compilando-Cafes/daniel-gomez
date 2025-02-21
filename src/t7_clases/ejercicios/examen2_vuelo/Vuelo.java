@@ -130,6 +130,4 @@ public class Vuelo {
         }
         System.out.println("No hay ningún pasajero con ese asiento.");
     }
-
-
 }

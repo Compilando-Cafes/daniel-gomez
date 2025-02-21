@@ -640,4 +640,16 @@ public class UtilesArrays {
 		// Reducir el tamaño del array
 		return Arrays.copyOf(array, array.length - 1);
 	}
+
+	// Buscar en un array de String y devuelve true si está o false si no está
+	public static boolean buscarEnArrayString(String[] array, String valor) {
+		boolean encontrado = false;
+		for (int i = 0; i < array.length; i++) {
+			if (array[i].equalsIgnoreCase(valor)) {
+				encontrado = true;
+				break;
+			}
+		}
+		return encontrado;
+	}
 }
