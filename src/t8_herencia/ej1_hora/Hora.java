@@ -39,20 +39,14 @@ public class Hora {
     }
 
     public void inc() {
-        if (hora == 23) {
-            hora = 0;
-            if (minutos == 59) {
-                minutos = 0;
-            } else {
-                minutos++;
-            }
-        } else {
-            if (minutos == 59) {
-                hora++;
-                minutos = 0;
-            } else {
-                hora++;
-                minutos++;
+        minutos++;
+        // Comprobar tope minutos
+        if (minutos == 60) {
+            minutos = 0;
+            hora++;
+            // Comprobar tope horas
+            if (hora == 24) {
+                hora = 0;
             }
         }
     }

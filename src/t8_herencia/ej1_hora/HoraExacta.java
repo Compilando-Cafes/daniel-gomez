@@ -24,25 +24,33 @@ public class HoraExacta extends Hora {
 
     @Override
     public void inc() {
-        if (hora == 23) {
-            hora = 0;
-            if (minutos == 59) {
+        segundos++;
+        // Comprobar tope segundos
+        if (segundos == 60) {
+            segundos = 0;
+            minutos++;
+            // Comprobar tope minutos
+            if (minutos == 60) {
                 minutos = 0;
-                if (segundos == 59)
-                    segundos = 0;
-                 else
-                     segundos++;
-            } else {
-                minutos++;
-            }
-        } else {
-            if (minutos == 59) {
                 hora++;
-                minutos = 0;
-            } else {
-                hora++;
-                minutos++;
+                // Comprobar tope horas
+                if (hora == 24) {
+                    hora = 0;
+                }
             }
         }
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%02d:%02d:%02d", hora, minutos, segundos);
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof HoraExacta horaExacta) {
+            return this.hora == horaExacta.hora && this.minutos == horaExacta.minutos && this.segundos == horaExacta.segundos;
+        }
+        return false;
     }
 }
