@@ -1,4 +1,4 @@
-package t8_herencia.ej2_instrumento;
+package t8_herencia.entregas.ej2_instrumento;
 
 import java.util.Arrays;
 import java.util.Random;
