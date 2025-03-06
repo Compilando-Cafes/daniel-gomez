@@ -1,6 +1,9 @@
 package t8_herencia.entregas.ej1_profesores;
 
-public class ProfesorInterino extends Profesor{
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
+
+public class ProfesorInterino extends Profesor {
     private Fecha fechaFinContrato;
     private Fecha fechaInicioContrato;
 
@@ -10,9 +13,9 @@ public class ProfesorInterino extends Profesor{
         this.fechaInicioContrato = fechaInicioContrato;
     }
 
-    public ProfesorInterino(){
-        this.fechaFinContrato = new Fecha(1,1,1);
-        this.fechaFinContrato = new Fecha(1,1,1);
+    public ProfesorInterino() {
+        this.fechaFinContrato = new Fecha(1, 1, 1);
+        this.fechaFinContrato = new Fecha(1, 1, 1);
     }
 
     public Fecha getFechaFinContrato() {
@@ -29,6 +32,29 @@ public class ProfesorInterino extends Profesor{
 
     public void setFechaInicioContrato(Fecha fechaInicioContrato) {
         this.fechaInicioContrato = fechaInicioContrato;
+    }
+
+    @Override
+    public String obtenerSalarioBase() {
+        // Calcular cantidad de meses con LocalDate y ChronoUnit (más exacto)
+        LocalDate fecha1 = LocalDate.of(2023, 5, 15);
+        LocalDate fecha2 = LocalDate.of(2024, 2, 10);
+        long mesesEntreDosFechas = ChronoUnit.MONTHS.between(fecha1, fecha2);
+
+        /*
+        // Cálculo sin LocalDate
+        int meses = 0;
+        int agnos = fechaFinContrato.getAgno() - fechaInicioContrato.getAgno();
+
+        if (agnos > 0) {
+            meses = (agnos * 12) + (fechaFinContrato.getMes() - fechaInicioContrato.getMes());
+        } else {
+            meses = fechaFinContrato.getMes() - fechaInicioContrato.getMes();
+        }
+        */
+
+        double resultado = 725 + ((double) 725 / mesesEntreDosFechas);
+        return String.format("%,.2f€", resultado);
     }
 
     @Override
