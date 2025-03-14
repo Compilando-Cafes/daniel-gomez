@@ -109,7 +109,7 @@ public class Caja {
                           \tAlto: %,.2f cm
                           \tAncho: %,.2f cm
                           \tFondo: %,.2f cm
-                          \tPeso: %,.2f cm
+                          \tPeso: %,.2f kg
                         
                           CONTENIDO ETIQUETA
                           \tNombre destinatario: %s
