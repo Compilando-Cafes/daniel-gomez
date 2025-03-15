@@ -1,8 +1,9 @@
-package t9_interfaces.interfaz2.ej2_voladores_navegantes_anfibios;
+package t9_interfaces.interfaz2.ej2_transportes;
 
 public class Barco implements Navegante {
     private double gastoEnViaje;
 
+    // Constructores
     public Barco(double gastoEnViaje) {
         this.gastoEnViaje = gastoEnViaje;
     }
@@ -11,6 +12,7 @@ public class Barco implements Navegante {
         this.gastoEnViaje = 0;
     }
 
+    // Getters y setters
     public double getGastoEnViaje() {
         return gastoEnViaje;
     }
@@ -19,6 +21,7 @@ public class Barco implements Navegante {
         this.gastoEnViaje = gastoEnViaje;
     }
 
+    // Sobreescribir métodos de la interfaz
     @Override
     public void zarpar() {
         System.out.println("Comenzamos el viaje con " + gastoEnViaje + " gasto de combustible.");
