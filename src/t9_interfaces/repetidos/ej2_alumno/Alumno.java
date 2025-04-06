@@ -1,4 +1,4 @@
-package t9_interfaces.repetidos.ej2_alumno;
+package t9_interfaces.ventanas.ej2_alumno;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

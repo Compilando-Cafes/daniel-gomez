@@ -1,5 +1,7 @@
 package t9_interfaces.repetidos.ej2_alumno;
 
+import t9_interfaces.interfaz3_comparable_comparator.ej2_alumnos.Alumno;
+
 import javax.swing.*;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
@@ -34,7 +36,21 @@ public class VentanaPrincipal extends JFrame {
             new Alumno("David", "Jiménez", LocalDate.of(2011, 9, 15), 14, 2, 12),
             new Alumno("Cristina", "Díaz", LocalDate.of(2012, 11, 16), 13, 3, 13),
             new Alumno("Fernando", "Moreno", LocalDate.of(2013, 1, 17), 12, 4, 14),
-            new Alumno("Elena", "Muñoz", LocalDate.of(2014, 3, 18), 11, 5, 15)
+            new Alumno("Elena", "Muñoz", LocalDate.of(2014, 3, 18), 11, 5, 15),
+            new Alumno("Álvaro", "Romero", LocalDate.of(2015, 5, 19), 11, 6, 16),
+            new Alumno("Patricia", "Vázquez", LocalDate.of(2016, 7, 20), 9, 7, 17),
+            new Alumno("Sergio", "Castro", LocalDate.of(2017, 10, 21), 8, 8, 18),
+            new Alumno("Raquel", "Molina", LocalDate.of(2018, 12, 22), 34, 9, 19),
+            new Alumno("Diego", "Cano", LocalDate.of(2019, 2, 23), 6, 10, 20),
+            new Alumno("Marta", "Cruz", LocalDate.of(2020, 4, 24), 5, 1, 21),
+            new Alumno("Antonio", "Salas", LocalDate.of(2021, 6, 25), 12, 2, 22),
+            new Alumno("Inés", "Paniagua", LocalDate.of(2022, 8, 26), 3, 3, 23),
+            new Alumno("Pablo", "Ceballos", LocalDate.of(2023, 10, 27), 2, 4, 24),
+            new Alumno("Clara", "Córdoba", LocalDate.of(2024, 12, 28), 1, 5, 25),
+            new Alumno("Jorge", "Córdoba", LocalDate.of(2025, 1, 29), 34, 6, 26),
+            new Alumno("Alba", "Córdoba", LocalDate.of(2026, 2, 3), 14, 7, 27),
+            new Alumno("Cristian", "Córdoba", LocalDate.of(2027, 3, 3), 56, 8, 28),
+            new Alumno("María", "Córdoba", LocalDate.of(2028, 4, 1), 43, 9, 29)
     };
 
     // Constructor de la ventana
