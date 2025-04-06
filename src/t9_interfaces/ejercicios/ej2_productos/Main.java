@@ -110,6 +110,7 @@ public class Main {
                 case 3 -> medicamentos(productos);
             }
         }
+
     }
 
     public static void ropa(Producto[] productos) {

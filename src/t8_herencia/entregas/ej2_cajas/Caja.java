@@ -122,9 +122,17 @@ public class Caja {
                           COSTE ENVÍO
                           \tCoste envío: %,.2f €
                           ==================================
-                        """, alto, ancho, fondo, peso,
-                etiqueta.getNombreDestinatario(), etiqueta.getDireccionDestinatario(), etiqueta.getDireccionRemitente(),
-                etiqueta.getEmpresaQueEnvia(), etiqueta.getPeso(), etiqueta.getDescripcionContenido(),
+                        """,
+                alto,
+                ancho,
+                fondo,
+                peso,
+                etiqueta.getNombreDestinatario(),
+                etiqueta.getDireccionDestinatario(),
+                etiqueta.getDireccionRemitente(),
+                etiqueta.getEmpresaQueEnvia(),
+                etiqueta.getPeso(),
+                etiqueta.getDescripcionContenido(),
                 costoEnvio());
     }
 }
