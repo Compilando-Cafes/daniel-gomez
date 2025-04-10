@@ -46,20 +46,25 @@ public class Carta implements Comparable {
     @Override
     public int compareTo(Object o) {
         Carta otraCarta = (Carta) o;
-        if (palo.name().equals(otraCarta.palo.name())) {
-            if (numero == otraCarta.numero) {
-                return 0;
-            } else if (numero < otraCarta.numero) {
-                return -1;
-            } else {
-                return 1;
-            }
-        } else if (palo.name().compareTo(otraCarta.palo.name()) < 0) {
-            return -1;
-        } else if (palo.name().compareTo(otraCarta.palo.name()) > 0) {
-            return 1;
-        }
-        return 0;
+        int comparacionPalo = this.palo.compareTo(otraCarta.palo);
+        // Si comparaciónPalo es igual a 0 devuelve su valor, si no, compara el número.
+        return (comparacionPalo != 0) ? comparacionPalo : Integer.compare(this.numero, otraCarta.numero);
+//
+//        Carta otraCarta = (Carta) o;
+//        if (palo.name().equals(otraCarta.palo.name())) {
+//            if (numero == otraCarta.numero) {
+//                return 0;
+//            } else if (numero < otraCarta.numero) {
+//                return -1;
+//            } else {
+//                return 1;
+//            }
+//        } else if (palo.name().compareTo(otraCarta.palo.name()) < 0) {
+//            return -1;
+//        } else if (palo.name().compareTo(otraCarta.palo.name()) > 0) {
+//            return 1;
+//        }
+//        return 0;
     }
 
     static Carta nuevaCarta(){

@@ -57,7 +57,12 @@ public class Main {
                 case 3 -> {
                     System.out.println("ALUMNOS ORDENADOS POR FECHA DE NACIMIENTO");
                     CompararFechaNacimiento cfn = new CompararFechaNacimiento();
-                    Arrays.sort(alumnos, cfn);
+                    Arrays.sort(alumnos, new Comparator<Alumno>() {
+                        @Override
+                        public int compare(Alumno o1, Alumno o2) {
+                            return 0;
+                        }
+                    });
                 }
                 case 4 -> {
                     System.out.println("ALUMNOS ORDENADOS POR APELLIDO");
