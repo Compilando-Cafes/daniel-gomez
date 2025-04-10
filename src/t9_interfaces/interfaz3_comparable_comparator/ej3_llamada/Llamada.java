@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.time.temporal.ChronoUnit;
 
-public class Llamada implements Comparable {
+public class Llamada implements Comparable<Llamada> {
     enum DistanciaTelefonos {A, B, C, D}
 
     private int numeroTelefono;
@@ -150,11 +150,11 @@ public class Llamada implements Comparable {
     }
 
     @Override
-    public int compareTo(Object o) {
-        Llamada otroNumero = (Llamada) o;
-        if (otroNumero.numeroTelefono == this.numeroTelefono){
-            return this.fechaYHoraIncioLlamada.compareTo(otroNumero.fechaYHoraIncioLlamada);
-        } else
-            return this.numeroTelefono - otroNumero.numeroTelefono;
+    public int compareTo(Llamada o) {
+        if (this.numeroTelefono == o.numeroTelefono) {
+            return this.fechaYHoraIncioLlamada.compareTo(o.fechaYHoraIncioLlamada);
+        } else {
+            return Integer.compare(this.numeroTelefono, o.numeroTelefono);
+        }
     }
 }

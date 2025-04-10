@@ -134,19 +134,16 @@ public class Alumno implements Comparable<Alumno> {
         if (this.edad != otro.edad) {
             return Integer.compare(this.edad, otro.edad);
         }
-
         // 2. Fecha de nacimiento
         int resultado = this.fechaNacimiento.compareTo(otro.fechaNacimiento);
         if (resultado != 0) {
             return resultado;
         }
-
         // 3. Apellido
         resultado = this.apellido.compareTo(otro.apellido);
         if (resultado != 0) {
             return resultado;
         }
-
         // 4. Nombre
         return this.nombre.compareTo(otro.nombre);
     }
