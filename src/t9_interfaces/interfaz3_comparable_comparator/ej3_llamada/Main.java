@@ -1,7 +1,9 @@
 package t9_interfaces.interfaz3_comparable_comparator.ej3_llamada;
 
+import java.lang.reflect.Array;
 import java.time.LocalDateTime;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class Main {
@@ -48,21 +50,29 @@ public class Main {
                     System.out.println("""
                             ***********************************************************************
                             LLAMADAS ORDENADAS DE FORMA NATURAL:""");
-                    Arrays.sort(llamadas);
+                    Llamada[] copia = Arrays.copyOf(llamadas, llamadas.length);
+                    Arrays.sort(copia);
                 }
                 case 3 -> {
                     System.out.println("""
                             ***********************************************************************
                             LLAMADAS ORDENADAS EN ORDEN INVERSO:""");
                     CompararLlamadasInverso cli = new CompararLlamadasInverso();
-                    Arrays.sort(llamadas, cli);
+                    Llamada[] copia = Arrays.copyOf(llamadas, llamadas.length);
+                    Arrays.sort(copia, cli);
                 }
                 case 4 -> {
                     System.out.println("""
                             ***********************************************************************
                             LLAMADAS ORDENADAS POR COSTE:""");
                     CompararLlamadasPorCoste clpc = new CompararLlamadasPorCoste();
-                    Arrays.sort(llamadas, clpc);
+                    Llamada[] copia = Arrays.copyOf(llamadas, llamadas.length);
+                    Arrays.sort(copia, new Comparator<Llamada>() {
+                        @Override
+                        public int compare(Llamada o1, Llamada o2) {
+                            return Double.compare(o1.calcularCoste(), o2.calcularCoste());
+                        }
+                    });
                 }
             }
             System.out.println(Arrays.deepToString(llamadas));

@@ -1,11 +1,11 @@
-package t10_colecciones.estructuras_dinamicas.lista;
+package t10_colecciones.clase_2_estructuras_dinamicas.lista;
 
 import t9_interfaces.interfaz3_comparable_comparator.ej2_alumnos.Alumno;
 
 import java.time.LocalDate;
 import java.util.Arrays;
 
-import static t10_colecciones.estructuras_dinamicas.lista.Lista.fusionTablas;
+import static t10_colecciones.clase_2_estructuras_dinamicas.lista.Lista.fusionTablas;
 
 public class Main {
     public static void main(String[] args) {

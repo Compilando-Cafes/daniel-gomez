@@ -78,6 +78,12 @@ public class Alumno implements Comparable<Alumno> {
                 """, nombre, apellido, fechaNacimiento.toString(), edad, notaMedia, totalAsignaturasMatriculado);
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        Alumno otroAlumno = (Alumno) obj;
+        return edad == otroAlumno.edad && fechaNacimiento.toString().equals(otroAlumno.fechaNacimiento.toString()) && apellido.equals(otroAlumno.apellido) && nombre.equals(otroAlumno.nombre);
+    }
+    // Opción 1
 //    @Override
 //    public int compareTo(Object o) {
 //        Alumno alumno = (Alumno) o;
@@ -122,12 +128,7 @@ public class Alumno implements Comparable<Alumno> {
 //        return 0;
 //    }
 
-    @Override
-    public boolean equals(Object obj) {
-        Alumno otroAlumno = (Alumno) obj;
-        return edad == otroAlumno.edad && fechaNacimiento.toString().equals(otroAlumno.fechaNacimiento.toString()) && apellido.equals(otroAlumno.apellido) && nombre.equals(otroAlumno.nombre);
-    }
-
+    // Opción 2
     @Override
     public int compareTo(Alumno otro) {
         // 1. Edad
@@ -147,4 +148,15 @@ public class Alumno implements Comparable<Alumno> {
         // 4. Nombre
         return this.nombre.compareTo(otro.nombre);
     }
+
+    // Opción 3
+//    @Override
+//    public int compareTo(Object o) {
+//        Alumno otroAlumno = (Alumno) o;
+//        int resultado = getEdad().compareTo(otroAlumno.getEdad());
+//        if (resultado == 0) resultado = getFechaNacimiento().compareTo(otroAlumno.getFechaNacimiento());
+//        if (resultado == 0) resultado = getApellido().compareTo(otroAlumno.getApellido());
+//        if (resultado == 0) resultado = getNombre().compareTo(otroAlumno.getNombre());
+//        return resultado;
+//    }
 }

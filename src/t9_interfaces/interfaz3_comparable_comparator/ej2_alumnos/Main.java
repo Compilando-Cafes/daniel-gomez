@@ -52,30 +52,38 @@ public class Main {
                     System.out.println("ALUMNOS ORDENADOS POR EDAD");
                     CompararEdad ce = new CompararEdad();
                     Comparator c = ce.reversed();
-                    Arrays.sort(alumnos, c);
+                    Alumno[] copia = Arrays.copyOf(alumnos, alumnos.length);
+                    Arrays.sort(copia, c);
                 }
                 case 3 -> {
                     System.out.println("ALUMNOS ORDENADOS POR FECHA DE NACIMIENTO");
                     CompararFechaNacimiento cfn = new CompararFechaNacimiento();
-                    Arrays.sort(alumnos, new Comparator<Alumno>() {
+                    Alumno[] copia = Arrays.copyOf(alumnos, alumnos.length);
+                    Arrays.sort(copia, new Comparator<Alumno>() {
                         @Override
                         public int compare(Alumno o1, Alumno o2) {
-                            return 0;
+                            return o1.getFechaNacimiento().compareTo(o2.getFechaNacimiento());
                         }
                     });
                 }
                 case 4 -> {
                     System.out.println("ALUMNOS ORDENADOS POR APELLIDO");
                     CompararApellido ca = new CompararApellido();
-                    Arrays.sort(alumnos, ca);
+                    Alumno[] copia = Arrays.copyOf(alumnos, alumnos.length);
+                    Arrays.sort(copia, ca);
                 }
                 case 5 -> {
                     System.out.println("ALUMNOS ORDENADOS POR NOMBRE");
                     CompararNombre cn = new CompararNombre();
-                    Arrays.sort(alumnos, cn);
+                    Alumno[] copia = Arrays.copyOf(alumnos, alumnos.length);
+                    Arrays.sort(copia, cn);
                 }
                 case 6 -> {
                     System.out.println("COMPARAR DOS ALUMNOS");
+                    for (int i = 0; i< alumnos.length; i++){
+                        System.out.println("Alumno número " + (i+1));
+                        System.out.println(alumnos[i]);
+                    }
                     int posAlumno1 = pedirNumeroEntero("Dime un alumno del 1 al 5: ", 1, 5)-1;
                     int posAlumno2 = pedirNumeroEntero("Dime un alumno del 1 al 5: ", 1, 5)-1;
                     System.out.println(alumnos[posAlumno1].equals(alumnos[posAlumno2])?"Son iguales.": "No son iguales");

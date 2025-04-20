@@ -1,4 +1,4 @@
-package t10_colecciones.colecciones.ej1_lista_cadenas;
+package t10_colecciones.clase_1_colecciones.ej1_lista_cadenas;
 
 import java.util.*;
 
@@ -52,7 +52,7 @@ public class Main {
                             System.out.print(it.next() + (it.hasNext()? " + ": ""));
                         }
                     }
-                    System.out.println(String.join(" + ", listaCadenas));
+//                    System.out.println(String.join(" + ", listaCadenas));
                     System.out.println();
                 }
                 case 4 -> {
@@ -72,10 +72,10 @@ public class Main {
                     System.out.println("Listar todos los elementos y solicitar, mientras se lista, si se quiere eliminar o pasar al siguiente");
                     Iterator<String> it = listaCadenas.iterator();
                     for (;it.hasNext();){
+                        System.out.println("Elemento de la lista: " + it.next());
+                        System.out.print("¿Quieres eliminarlo? (Si o no): ");
                         boolean control = true;
                         while (control){
-                            System.out.println("Elemento de la lista: " + it.next());
-                            System.out.print("¿Quieres eliminarlo? (Si o no): ");
                             String opcion = sc.nextLine().toLowerCase();
                             if (opcion.equals("si")){
                                 it.remove();
