@@ -9,6 +9,7 @@ public class Main {
         Set<Alumno> alumnos = new TreeSet<>();
         int opcion;
         do {
+            System.out.println("_________________________________________________________________");
             System.out.println("1. Añadir nuevo alumno sin notas");
             System.out.println("2. Añadir notas a un alumno");
             System.out.println("3. Listar a todos los alumnos");
@@ -18,25 +19,30 @@ public class Main {
             System.out.println("0. Salir");
             opcion = pedirNumeroEntero("Introducir opción: ");
             switch (opcion) {
+                case 0 -> {
+                    System.out.println("¡Adios!");
+                }
                 case 1 -> {
-                    System.out.println("1. Añadir nuevo alumno sin notas");
-                    int id = pedirNumeroEntero("ID alumno: ");
-                    System.out.print("Nombre del alumno: ");
+                    System.out.println("_________________________________________________");
+                    System.out.println("\t1. Añadir nuevo alumno sin notas");
+                    int id = pedirNumeroEntero("\tID alumno: ");
+                    System.out.print("\tNombre del alumno: ");
                     String nombre = sc.nextLine();
                     alumnos.add(new Alumno(id, nombre));
                 }
                 case 2 -> {
-                    System.out.println("2. Añadir notas a un alumno");
+                    System.out.println("_________________________________________________");
+                    System.out.println("\t2. Añadir notas a un alumno");
                     if (alumnos.isEmpty()) {
-                        System.out.println("No hay alumnos añadidos. Añadirlos primero.");
+                        System.out.println("\tNo hay alumnos añadidos. Añadirlos primero.");
                         break;
                     }
-                    System.out.println("Alumnos disponibles:");
-                    for (Alumno alumno : alumnos){
+                    System.out.println("\tAlumnos disponibles:");
+                    for (Alumno alumno : alumnos) {
                         System.out.println(alumno);
                     }
 
-                    int idAlumno = pedirNumeroEntero("ID del alumno al que quieres añadir las notas: ");
+                    int idAlumno = pedirNumeroEntero("\tID del alumno al que quieres añadir las notas: ");
                     // Buscar si existe el alumno
                     Alumno alumnoElegido = null;
                     for (Alumno a : alumnos) {
@@ -47,67 +53,77 @@ public class Main {
                     }
                     // Si no existe salir
                     if (alumnoElegido == null) {
-                        System.out.println("Alumno no encontrado");
+                        System.out.println("\tAlumno no encontrado");
                         break;
                     }
 
                     // Inicializar la lista de notas comprobando que no lo está ya
-                    if (alumnoElegido.getNotasAlumno() == null) {
+                    if (alumnoElegido.getNotasAlumno().isEmpty()) {
                         alumnoElegido.setNotasAlumno(new ArrayList<>());
+                    } else {
+                        System.out.println("El alumno ya tiene las notas añadidas");
+                        break;
                     }
 
-                    int numeroNotas = pedirNumeroEntero("¿Cuantas notas quieres añadir? (mínimo 1)", 1);
+                    int numeroNotas = pedirNumeroEntero("\t¿Cuantas notas quieres añadir? (mínimo 1): ", 1);
 
-                    for (int i = 0; i < numeroNotas; i++) {
-                        System.out.println("Nota número " + i + " de " + numeroNotas + ": ");
-                        int idAsignatura = pedirNumeroEntero("ID de asignatura: ", 1);
-                        System.out.print("Nombre de asignatura: ");
+                    for (int i = 1; i <= numeroNotas; i++) {
+                        System.out.println("\tNota número " + i + " de " + numeroNotas + ": ");
+                        int idAsignatura = pedirNumeroEntero("\tID de asignatura: ", 1);
+                        System.out.print("\tNombre de asignatura: ");
                         String nombreAsignatura = sc.nextLine();
-                        int nota = pedirNumeroEntero("Nota: ", 0, 10);
+                        int nota = pedirNumeroEntero("\tNota: ", 0, 10);
 
                         alumnoElegido.insertaNota(new NotasAlumno(new Asignatura(idAsignatura, nombreAsignatura), nota));
                     }
-                    System.out.println("Notas añadidas a " + alumnoElegido.getNombre());
+                    System.out.println("\tNotas añadidas a " + alumnoElegido.getNombre());
                 }
                 case 3 -> {
-                    System.out.println("3. Listar a todos los alumnos");
+                    System.out.println("_________________________________________________");
+                    System.out.println("\t3. Listar a todos los alumnos");
                     // Comprobar si la lista está vacía
-                    if (alumnos.isEmpty()){
-                        System.out.println("No hay alumnos añadidos a la lista. Añadirlos primero.");
+                    if (alumnos.isEmpty()) {
+                        System.out.println("\tNo hay alumnos añadidos a la lista. Añadirlos primero.");
                     } else {
-                        for (Alumno alumno : alumnos){
+                        for (Alumno alumno : alumnos) {
                             System.out.println(alumno);
                         }
                     }
                 }
                 case 4 -> {
-                    System.out.println("4. Reorganizar la lista de alumnos");
+                    System.out.println("_________________________________________________");
+                    System.out.println("\t4. Reorganizar la lista de alumnos");
                     // Comprobar si hay alumnos en la lista
-                    if (alumnos.isEmpty()){
-                        System.out.println("La lista de alumnos está vacía. Añade alumnos primero.");
+                    if (alumnos.isEmpty()) {
+                        System.out.println("\tLa lista de alumnos está vacía. Añade alumnos primero.");
                         break;
                     }
                     // Como he puesto con un set ya se ordena automáticamente
                     // Para variar lo pondré que se muestre con otros órdenes distintos
                     int orden;
                     do {
-                        System.out.println("1. Ordenar por ID de alumno.");
-                        System.out.println("2. Ordenar por nombre");
-                        System.out.println("3. Ordenar por mayor nota media");
-                        System.out.println("4. Ordenar por menor nota media");
-                        System.out.println("5. Ordenar por alumnos con mayor número de suspensos");
-                        System.out.println("6. Ordenar por alumnos con mayor número de aprobados");
-                        System.out.println("0. Salir");
-                        orden = pedirNumeroEntero("Elección: ", 0, 6);
-                        switch (orden){
+                        System.out.println("\t1. Ordenar por ID de alumno.");
+                        System.out.println("\t2. Ordenar por nombre");
+                        System.out.println("\t3. Ordenar por mayor nota media");
+                        System.out.println("\t4. Ordenar por menor nota media");
+                        System.out.println("\t5. Ordenar por alumnos con mayor número de suspensos");
+                        System.out.println("\t6. Ordenar por alumnos con mayor número de aprobados");
+                        System.out.println("\t0. Salir");
+                        orden = pedirNumeroEntero("\tElección: ", 0, 6);
+                        switch (orden) {
+                            case 0 -> {
+                                System.out.println("Volviendo al menú principal");
+                            }
                             case 1 -> {
-                                System.out.println("Alumnos ordenados por ID de alumno:");
-                                for (Alumno alumno : alumnos){
+                                System.out.println("________________________________________");
+                                System.out.println("\tAlumnos ordenados por ID de alumno:");
+                                for (Alumno alumno : alumnos) {
                                     System.out.println(alumno);
                                 }
                             }
                             case 2 -> {
-                                System.out.println("Alumnos ordenados por nombre:");
+                                System.out.println("________________________________________");
+                                System.out.println("\tAlumnos ordenados por nombre:");
                                 // Convertir el set con un orden prefijado a un list que permite cambiarlo
                                 List<Alumno> listaAlumnos = new ArrayList<>(alumnos);
                                 listaAlumnos.sort(new Comparator<Alumno>() {
@@ -116,12 +132,28 @@ public class Main {
                                         return o1.getNombre().compareTo(o2.getNombre());
                                     }
                                 });
-                                for (Alumno alumno : listaAlumnos){
+                                for (Alumno alumno : listaAlumnos) {
                                     System.out.println(alumno);
                                 }
                             }
                             case 3 -> {
-                                System.out.println("Alumnos ordenados por mayor nota media:");
+                                System.out.println("________________________________________");
+                                System.out.println("\tAlumnos ordenados por mayor nota media:");
+                                // Convertir el set con un orden prefijado a un list que permite cambiarlo
+                                List<Alumno> listaAlumnos = new ArrayList<>(alumnos);
+                                listaAlumnos.sort(new Comparator<Alumno>() {
+                                    @Override
+                                    public int compare(Alumno o1, Alumno o2) {
+                                        return Double.compare(o1.notaMedia(), o2.notaMedia());
+                                    }
+                                }.reversed());
+                                for (Alumno alumno : listaAlumnos) {
+                                    System.out.println(alumno);
+                                }
+                            }
+                            case 4 -> {
+                                System.out.println("________________________________________");
+                                System.out.println("\tAlumnos ordenados por menor nota media:");
                                 // Convertir el set con un orden prefijado a un list que permite cambiarlo
                                 List<Alumno> listaAlumnos = new ArrayList<>(alumnos);
                                 listaAlumnos.sort(new Comparator<Alumno>() {
@@ -130,26 +162,13 @@ public class Main {
                                         return Double.compare(o1.notaMedia(), o2.notaMedia());
                                     }
                                 });
-                                for (Alumno alumno : listaAlumnos){
-                                    System.out.println(alumno);
-                                }
-                            }
-                            case 4 -> {
-                                System.out.println("Alumnos ordenados por menor nota media:");
-                                // Convertir el set con un orden prefijado a un list que permite cambiarlo
-                                List<Alumno> listaAlumnos = new ArrayList<>(alumnos);
-                                listaAlumnos.sort(new Comparator<Alumno>() {
-                                    @Override
-                                    public int compare(Alumno o1, Alumno o2) {
-                                        return Double.compare(o1.notaMedia(), o2.notaMedia());
-                                    }
-                                }.reversed());
-                                for (Alumno alumno : listaAlumnos){
+                                for (Alumno alumno : listaAlumnos) {
                                     System.out.println(alumno);
                                 }
                             }
                             case 5 -> {
-                                System.out.println("Alumnos ordenados por mayor número de suspensos:");
+                                System.out.println("________________________________________");
+                                System.out.println("\tAlumnos ordenados por mayor número de suspensos:");
                                 // Convertir el set con un orden prefijado a un list que permite cambiarlo
                                 List<Alumno> listaAlumnos = new ArrayList<>(alumnos);
                                 listaAlumnos.sort(new Comparator<Alumno>() {
@@ -158,12 +177,13 @@ public class Main {
                                         return Integer.compare(o1.numeroSuspensos(), o2.numeroSuspensos());
                                     }
                                 }.reversed());
-                                for (Alumno alumno : listaAlumnos){
+                                for (Alumno alumno : listaAlumnos) {
                                     System.out.println(alumno);
                                 }
                             }
                             case 6 -> {
-                                System.out.println("Alumnos ordenados por mayor número de aprobados:");
+                                System.out.println("________________________________________");
+                                System.out.println("\tAlumnos ordenados por mayor número de aprobados:");
                                 // Convertir el set con un orden prefijado a un list que permite cambiarlo
                                 List<Alumno> listaAlumnos = new ArrayList<>(alumnos);
                                 listaAlumnos.sort(new Comparator<Alumno>() {
@@ -172,63 +192,65 @@ public class Main {
                                         return Integer.compare(o1.numeroAprobados(), o2.numeroAprobados());
                                     }
                                 }.reversed());
-                                for (Alumno alumno : listaAlumnos){
+                                for (Alumno alumno : listaAlumnos) {
                                     System.out.println(alumno);
                                 }
                             }
-                            default -> System.out.println("Elige una opción correcta.");
+                            default -> System.out.println("\tElige una opción correcta.");
                         }
                     } while (orden != 0);
                 }
 
                 case 5 -> {
-                    System.out.println("5. Obtener la nota media más repetida");
+                    System.out.println("_________________________________________________");
+                    System.out.println("\t5. Obtener la nota media más repetida");
                     // Comprobar si la lista está vacía
-                    if (alumnos.isEmpty()){
-                        System.out.println("Aún no hay alumnos en la lista. Añadirlo primero.");
+                    if (alumnos.isEmpty()) {
+                        System.out.println("\tAún no hay alumnos en la lista. Añadirlo primero.");
                     } else {
                         // Crear una lista nueva y guardar todas las notas medias en ella y mostrarla
                         List<Double> notasMedias = new ArrayList<>();
-                        for (Alumno alumno: alumnos){
+                        for (Alumno alumno : alumnos) {
                             notasMedias.add(alumno.notaMedia());
-                            System.out.printf("La nota media de %s es: %,.2f", alumno.getNombre(), alumno.notaMedia());
+                            System.out.printf("\tLa nota media de %s es: %,.2f\n", alumno.getNombre(), alumno.notaMedia());
                         }
 
                         // Buscar la nota más frecuente
                         double notaMasRepetida = 0;
                         int maximaFrecuencia = 0;
-                        for (Double nota: notasMedias){
+                        for (Double nota : notasMedias) {
                             int frecuencia = Collections.frequency(notasMedias, nota);
-                            if (frecuencia> maximaFrecuencia){
+                            if (frecuencia > maximaFrecuencia) {
                                 maximaFrecuencia = frecuencia;
                                 notaMasRepetida = nota;
                             }
                         }
 
                         // Controlar que todas las notas no sean diferentes
-                        if (maximaFrecuencia == 0){
-                            System.out.println("Todas las notas son distintas. No hay ninguna que se repita.");
+                        if (maximaFrecuencia == 1) {
+                            System.out.println("\tTodas las notas son distintas. No hay ninguna que se repita.");
                         } else {
-                            System.out.printf("La nota media que más se repite es: %,.2f. Se ha repetido %d veces.", notaMasRepetida, maximaFrecuencia);
+                            System.out.printf("\tLa nota media que más se repite es: %,.2f. Se ha repetido %d veces.\n", notaMasRepetida, maximaFrecuencia);
                         }
                     }
                 }
 
                 case 6 -> {
-                    System.out.println("6. Listar la cantidad de aprobados y suspensos de cada alumno");
+                    System.out.println("_________________________________________________");
+                    System.out.println("\t6. Listar la cantidad de aprobados y suspensos de cada alumno");
                     // Comprobar si está vacía la lista
-                    if (alumnos.isEmpty()){
-                        System.out.println("Añade alumnos primero.");
+                    if (alumnos.isEmpty()) {
+                        System.out.println("\tAñade alumnos primero.");
                     } else {
-                        for (Alumno alumno : alumnos){
-                            System.out.println(alumno.getNombre() + " tiene " + alumno.numeroAprobados() +
-                                    " aprobada" + (alumno.numeroAprobados() == 1? "": "s") +  " y " +
-                                    alumno.numeroSuspensos() + " suspendida" + (alumno.numeroSuspensos()==1? "": "s") );
+                        for (Alumno alumno : alumnos) {
+                            System.out.println("\t" + alumno.getNombre() + " tiene " + alumno.numeroAprobados() +
+                                    " aprobada" + (alumno.numeroAprobados() == 1 ? "" : "s") + " y " +
+                                    alumno.numeroSuspensos() + " suspendida" + (alumno.numeroSuspensos() == 1 ? "" : "s"));
                         }
                     }
                 }
                 default -> {
-                    System.out.println("Introduce una opción válida.");
+                    System.out.println("\tIntroduce una opción válida.");
                 }
             }
         } while (opcion != 0);

@@ -105,8 +105,12 @@ public class Alumno implements Comparable<Alumno>{
     @Override
     public String toString() {
         String resultado = String.format("id: %d / %s\n", getIdAlumno(), getNombre());
-        for (NotasAlumno nota : notasAlumno) {
-            resultado += String.format("\t· %s, Nota: %d\n", nota.getAsignatura(), nota.getNota());
+        if (notasAlumno.isEmpty()){
+            resultado += "Sin notas añadidas.";
+        } else {
+            for (NotasAlumno nota : notasAlumno) {
+                resultado += String.format("\t· %s, Nota: %d\n", nota.getAsignatura().getNombreAsignatura(), nota.getNota());
+            }
         }
         return resultado;
     }
