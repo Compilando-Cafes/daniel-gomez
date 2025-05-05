@@ -30,9 +30,15 @@ public class UtilesPedirNumerosMenus {
                 break;
             }
             switch (eleccion) {
-                case 1 -> System.out.println("Poner aquí la función 1");
-                case 2 -> System.out.println("Poner aquí la función 2");
-                case 3 -> System.out.println("Poner aquí la función 3");
+                case 1 -> {
+
+                }
+                case 2 -> {
+
+                }
+                case 3 -> {
+
+                }
             }
         }
     }
