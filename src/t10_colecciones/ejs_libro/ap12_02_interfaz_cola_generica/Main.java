@@ -1,4 +1,4 @@
-package t10_colecciones.ejs_libro.ap12_02_interfaz_cola_generica;
+package t12_colecciones.ejs_libro.ap12_02_interfaz_cola_generica;
 
 public class Main {
     public static void main(String[] args) {

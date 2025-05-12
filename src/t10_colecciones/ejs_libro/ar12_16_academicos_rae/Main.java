@@ -1,4 +1,4 @@
-package t10_colecciones.ejs_libro.ar12_16_academicos_rae;
+package t12_colecciones.ejs_libro.ar12_16_academicos_rae;
 
 import java.util.*;
 

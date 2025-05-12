@@ -1,4 +1,4 @@
-package t10_colecciones.ejs_libro.ar12_15_tienda_repuestos_automoviles;
+package t12_colecciones.ejs_libro.ar12_15_tienda_repuestos_automoviles;
 
 import java.io.*;
 import java.util.Map;

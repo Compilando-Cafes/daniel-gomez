@@ -1,4 +1,4 @@
-package t10_colecciones.clase_1_colecciones.ej2_numeros_positivos_negativos;
+package t12_colecciones.clase_1_colecciones.ej2_numeros_positivos_negativos;
 
 import java.util.ArrayList;
 import java.util.Collection;

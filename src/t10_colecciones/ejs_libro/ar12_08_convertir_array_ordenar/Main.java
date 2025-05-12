@@ -1,4 +1,4 @@
-package t10_colecciones.ejs_libro.ar12_08_convertir_array_ordenar;
+package t12_colecciones.ejs_libro.ar12_08_convertir_array_ordenar;
 
 import java.util.*;
 

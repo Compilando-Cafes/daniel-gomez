@@ -1,6 +1,6 @@
-package t10_colecciones.ejs_libro.aa12_11a15_contenedor_cola_pila_ordenado;
+package t12_colecciones.ejs_libro.aa12_11a15_contenedor_cola_pila_ordenado;
 
-import t10_colecciones.ejs_libro.ar12_03_interfaz_pila_generica.Pila;
+import t12_colecciones.ejs_libro.ar12_03_interfaz_pila_generica.Pila;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package t10_colecciones.clase_2_estructuras_dinamicas.lista;
+package t12_colecciones.clase_2_estructuras_dinamicas.lista;
 
 import java.util.Arrays;
 

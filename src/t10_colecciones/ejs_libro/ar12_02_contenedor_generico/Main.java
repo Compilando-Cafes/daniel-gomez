@@ -1,4 +1,4 @@
-package t10_colecciones.ejs_libro.ar12_02_contenedor_generico;
+package t12_colecciones.ejs_libro.ar12_02_contenedor_generico;
 
 public class Main {
     public static void main(String[] args) {

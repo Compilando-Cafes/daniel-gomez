@@ -51,7 +51,7 @@ public class Alumno implements Comparable<Alumno>{
         this.notasAlumno = notasAlumno;
     }
 
-    public int notaAsignatura(Integer as) {
+    public int notaAsignatura(int as) {
         return notasAlumno.get(as).getNota();
     }
 

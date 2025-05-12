@@ -1,6 +1,5 @@
-package t10_colecciones.ejs_libro.aa12_23_coleccion_nombres_ordenados;
+package t12_colecciones.ejs_libro.aa12_23_coleccion_nombres_ordenados;
 
-import java.util.LinkedHashSet;
 import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;

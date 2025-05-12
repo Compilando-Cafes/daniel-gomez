@@ -1,4 +1,4 @@
-package t10_colecciones.ejs_libro.ar12_05_quitar_repetidos_coleccion;
+package t12_colecciones.ejs_libro.ar12_05_quitar_repetidos_coleccion;
 
 import java.util.ArrayList;
 import java.util.Collection;

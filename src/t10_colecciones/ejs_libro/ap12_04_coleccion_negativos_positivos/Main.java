@@ -1,4 +1,4 @@
-package t10_colecciones.ejs_libro.ap12_04_coleccion_negativos_positivos;
+package t12_colecciones.ejs_libro.ap12_04_coleccion_negativos_positivos;
 
 import java.util.ArrayList;
 import java.util.Collection;

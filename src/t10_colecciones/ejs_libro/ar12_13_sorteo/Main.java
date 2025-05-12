@@ -1,4 +1,4 @@
-package t10_colecciones.ejs_libro.ar12_13_sorteo;
+package t12_colecciones.ejs_libro.ar12_13_sorteo;
 
 public class Main {
     public static void main(String[] args) {

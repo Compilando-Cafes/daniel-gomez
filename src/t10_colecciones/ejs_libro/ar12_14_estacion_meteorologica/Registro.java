@@ -1,4 +1,4 @@
-package t10_colecciones.ejs_libro.ar12_14_estacion_meteorologica;
+package t12_colecciones.ejs_libro.ar12_14_estacion_meteorologica;
 
 import java.io.Serializable;
 import java.time.LocalTime;

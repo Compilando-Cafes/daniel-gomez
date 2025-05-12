@@ -1,4 +1,4 @@
-package t10_colecciones.clase_5_ejercicios.ejercicio1_pedidos;
+package t12_colecciones.clase_5_ejercicios.ejercicio1_pedidos;
 
 import java.util.*;
 

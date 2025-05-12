@@ -1,4 +1,4 @@
-package t10_colecciones.ejs_libro.ar12_11_socio;
+package t12_colecciones.ejs_libro.ar12_11_socio;
 
 import java.io.*;
 import java.util.Comparator;

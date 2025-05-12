@@ -1,7 +1,6 @@
-package t10_colecciones.ejs_libro.ar12_11_socio;
+package t12_colecciones.ejs_libro.ar12_11_socio;
 
 import java.io.Serializable;
-import java.sql.Date;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;

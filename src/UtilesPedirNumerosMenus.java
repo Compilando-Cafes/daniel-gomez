@@ -4,23 +4,15 @@ import java.util.Random;
 public class UtilesPedirNumerosMenus {
     static Scanner sc = new Scanner(System.in);
 
-
-    public static void menu() {
-        System.out.println("""
-                ==============================================
-                NOMBRE APP
-                ==============================================""");
-    }
-
-    public static void menuConOpciones() {
+    public static void main(String[] args) {
 
         while (true) {
             System.out.println("""
                     ==============================================
                     NOMBRE APP
-                    1.
-                    2.
-                    3.
+                    1. 
+                    2. 
+                    3. 
                     0.
                     ==============================================""");
 

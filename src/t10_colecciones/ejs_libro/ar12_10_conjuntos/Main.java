@@ -1,6 +1,4 @@
-package t10_colecciones.ejs_libro.ar12_10_conjuntos;
-
-import com.sun.source.util.Trees;
+package t12_colecciones.ejs_libro.ar12_10_conjuntos;
 
 import java.util.*;
 

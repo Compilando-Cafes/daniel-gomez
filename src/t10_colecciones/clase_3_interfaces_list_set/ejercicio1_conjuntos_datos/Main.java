@@ -1,4 +1,4 @@
-package t10_colecciones.clase_3_interfaces_list_set.ejercicio1_conjuntos_datos;
+package t12_colecciones.clase_3_interfaces_list_set.ejercicio1_conjuntos_datos;
 
 import java.util.*;
 

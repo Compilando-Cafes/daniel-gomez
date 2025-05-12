@@ -1,4 +1,4 @@
-package t10_colecciones.ejs_libro.aa12_16_socio_ampliada;
+package t12_colecciones.ejs_libro.aa12_16_socio_ampliada;
 
 import java.io.Serializable;
 import java.time.LocalDate;

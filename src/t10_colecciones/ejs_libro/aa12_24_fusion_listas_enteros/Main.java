@@ -1,4 +1,4 @@
-package t10_colecciones.ejs_libro.aa12_24_fusion_listas_enteros;
+package t12_colecciones.ejs_libro.aa12_24_fusion_listas_enteros;
 
 import java.util.ArrayList;
 import java.util.Collections;

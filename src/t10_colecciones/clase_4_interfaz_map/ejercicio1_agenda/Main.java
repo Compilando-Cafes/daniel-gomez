@@ -1,4 +1,4 @@
-package t10_colecciones.clase_4_interfaz_map.ejercicio1_agenda;
+package t12_colecciones.clase_4_interfaz_map.ejercicio1_agenda;
 
 import java.util.*;
 

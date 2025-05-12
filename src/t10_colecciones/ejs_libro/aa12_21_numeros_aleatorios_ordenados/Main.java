@@ -1,4 +1,4 @@
-package t10_colecciones.ejs_libro.aa12_21_numeros_aleatorios_ordenados;
+package t12_colecciones.ejs_libro.aa12_21_numeros_aleatorios_ordenados;
 
 import java.util.Collection;
 import java.util.Comparator;

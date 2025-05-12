@@ -1,4 +1,4 @@
-package t10_colecciones.ejs_libro.ar12_09_lista_con_indices;
+package t12_colecciones.ejs_libro.ar12_09_lista_con_indices;
 
 import java.util.ArrayList;
 import java.util.List;

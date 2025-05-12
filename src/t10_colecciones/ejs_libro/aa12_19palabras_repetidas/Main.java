@@ -1,4 +1,4 @@
-package t10_colecciones.ejs_libro.aa12_19palabras_repetidas;
+package t12_colecciones.ejs_libro.aa12_19palabras_repetidas;
 
 import java.util.*;
 

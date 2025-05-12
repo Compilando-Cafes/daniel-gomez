@@ -1,4 +1,4 @@
-package t10_colecciones.ejs_libro.ap12_03_quitar_cincos_con_iterator;
+package t12_colecciones.ejs_libro.ap12_03_quitar_cincos_con_iterator;
 
 import java.util.ArrayList;
 import java.util.Collection;

@@ -1,4 +1,4 @@
-package t10_colecciones.ejs_libro.ap12_01_unir_tablas_genericas;
+package t12_colecciones.ejs_libro.ap12_01_unir_tablas_genericas;
 
 import java.util.Arrays;
 

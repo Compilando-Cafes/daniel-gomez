@@ -1,4 +1,4 @@
-package t10_colecciones.ejs_libro.ar12_06_quitar_cincos_con_coleccion;
+package t12_colecciones.ejs_libro.ar12_06_quitar_cincos_con_coleccion;
 
 import java.util.ArrayList;
 import java.util.Collection;

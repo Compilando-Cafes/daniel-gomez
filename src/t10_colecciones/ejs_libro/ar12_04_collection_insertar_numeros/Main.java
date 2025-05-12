@@ -1,4 +1,4 @@
-package t10_colecciones.ejs_libro.ar12_04_collection_insertar_numeros;
+package t12_colecciones.ejs_libro.ar12_04_collection_insertar_numeros;
 
 import java.util.ArrayList;
 import java.util.Collection;

@@ -1,4 +1,4 @@
-package t10_colecciones.clase_1_colecciones.ej1_lista_cadenas;
+package t12_colecciones.clase_1_colecciones.ej1_lista_cadenas;
 
 import java.util.*;
 

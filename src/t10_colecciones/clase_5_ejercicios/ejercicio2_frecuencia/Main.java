@@ -1,4 +1,4 @@
-package t10_colecciones.clase_5_ejercicios.ejercicio2_frecuencia;
+package t12_colecciones.clase_5_ejercicios.ejercicio2_frecuencia;
 
 import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;

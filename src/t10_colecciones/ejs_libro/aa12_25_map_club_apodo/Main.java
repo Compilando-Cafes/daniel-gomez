@@ -1,4 +1,4 @@
-package t10_colecciones.ejs_libro.aa12_25_map_club_apodo;
+package t12_colecciones.ejs_libro.aa12_25_map_club_apodo;
 
 import java.io.*;
 import java.util.Comparator;

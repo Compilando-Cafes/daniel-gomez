@@ -1,4 +1,4 @@
-package t10_colecciones.ejs_libro.aa12_22_coleccion_nombres;
+package t12_colecciones.ejs_libro.aa12_22_coleccion_nombres;
 
 import java.util.LinkedHashSet;
 import java.util.Scanner;

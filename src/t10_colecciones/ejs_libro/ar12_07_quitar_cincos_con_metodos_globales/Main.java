@@ -1,4 +1,4 @@
-package t10_colecciones.ejs_libro.ar12_07_quitar_cincos_con_metodos_globales;
+package t12_colecciones.ejs_libro.ar12_07_quitar_cincos_con_metodos_globales;
 
 import java.util.ArrayList;
 import java.util.Arrays;

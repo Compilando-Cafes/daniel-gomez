@@ -1,4 +1,4 @@
-package t10_colecciones.ejs_libro.ar12_12_metodo_unir_conjuntos_genericos;
+package t12_colecciones.ejs_libro.ar12_12_metodo_unir_conjuntos_genericos;
 
 import java.util.HashSet;
 import java.util.Set;

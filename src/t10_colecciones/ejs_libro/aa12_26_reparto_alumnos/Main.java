@@ -1,4 +1,4 @@
-package t10_colecciones.ejs_libro.aa12_26_reparto_alumnos;
+package t12_colecciones.ejs_libro.aa12_26_reparto_alumnos;
 
 import java.util.ArrayList;
 import java.util.Collections;
