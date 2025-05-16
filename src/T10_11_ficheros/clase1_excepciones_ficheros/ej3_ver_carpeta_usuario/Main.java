@@ -20,7 +20,7 @@ public class Main {
 
             System.out.print("Dime que archivo quieres ver: ");
             String nombreArchivo = sc.next();
-            File archivoAbrir = new File(archivo + nombreArchivo);
+            File archivoAbrir = new File(archivo, nombreArchivo);
             if (archivoAbrir.exists()) {
                 System.out.println("Nombre del archivo:");
                 System.out.println(archivoAbrir.getName());

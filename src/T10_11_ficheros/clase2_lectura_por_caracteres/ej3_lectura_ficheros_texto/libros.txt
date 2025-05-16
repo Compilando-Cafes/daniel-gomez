@@ -1,0 +1,15 @@
+9780451524935,1984,George Orwell,Signet Classic,1950
+9780140449136,The Odyssey,Homer,Penguin Classics,2003
+9780061120084,To Kill a Mockingbird,Harper Lee,Harper Perennial,2006
+9780743273565,The Great Gatsby,F. Scott Fitzgerald,Scribner,2004
+9780307277671,The Road,Cormac McCarthy,Vintage,2006
+9780141439518,Jane Eyre,Charlotte Brontë,Penguin Classics,2006
+9780140449266,Crime and Punishment,Fyodor Dostoevsky,Penguin Classics,2002
+9780141439600,Wuthering Heights,Emily Brontë,Penguin Classics,2003
+9780679783268,Pride and Prejudice,Jane Austen,Modern Library,1995
+9780385472579,Things Fall Apart,Chinua Achebe,Anchor,1994
+9780142437230,Moby-Dick,Herman Melville,Penguin Classics,2002
+9780486415871,Frankenstein,Mary Shelley,Dover Publications,2001
+9780140449266,The Brothers Karamazov,Fyodor Dostoevsky,Penguin Classics,2003
+9780743477116,Macbeth,William Shakespeare,Scribner,2003
+9780451532083,Dracula,Bram Stoker,Signet Classics,2007
