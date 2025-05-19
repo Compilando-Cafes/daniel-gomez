@@ -1,0 +1,152 @@
+-----------------------
+Identificador de Alumno: 11111
+Nombre: FERNANDO
+Apellido: GARCIA
+Edad: 19
+Nota media: 8.45
+Localización: GUADALAJARA: PINZON 14
+-----------------------
+-----------------------
+Identificador de Alumno: 22222
+Nombre: ROCIO
+Apellido: MOROTE
+Edad: 27
+Nota media: 2.0
+Localización: CUENCA: TOLEDO 85
+-----------------------
+-----------------------
+Identificador de Alumno: 33333
+Nombre: LOPE
+Apellido: JEREZ
+Edad: 13
+Nota media: 4.7
+Localización: ALCALA: PALENCIA 63
+-----------------------
+-----------------------
+Identificador de Alumno: 44444
+Nombre: ROSA
+Apellido: PALACIOS
+Edad: 15
+Nota media: 6.56
+Localización: TARANCON: TEJARES 25
+-----------------------
+-----------------------
+Identificador de Alumno: 55555
+Nombre: JOAQUIN
+Apellido: NAVARRO
+Edad: 38
+Nota media: 9.6
+Localización: ALBACETE: RAMON Y CAJAL 46
+-----------------------
+-----------------------
+Identificador de Alumno: 66666
+Nombre: MARIO
+Apellido: GARRIDO
+Edad: 31
+Nota media: 1.87
+Localización: CIUDAD REAL: ZAPATERO 92
+-----------------------
+-----------------------
+Identificador de Alumno: 77777
+Nombre: REY
+Apellido: LORENZO
+Edad: 23
+Nota media: 5.0
+Localización: TOLEDO: ECHEGARAI 76
+-----------------------
+-----------------------
+Identificador de Alumno: 88888
+Nombre: SARA
+Apellido: ALFARO
+Edad: 34
+Nota media: 8.47
+Localización: ALICANTE: JULIO 13
+-----------------------
+-----------------------
+Identificador de Alumno: 99999
+Nombre: PEDRO
+Apellido: AMORAGA
+Edad: 18
+Nota media: 6.5
+Localización: TORREJON: FERIAL 31
+-----------------------
+-----------------------
+Identificador de Alumno: 10101
+Nombre: LUCIA
+Apellido: HERNANDEZ
+Edad: 22
+Nota media: 7.3
+Localización: MADRID: GRAN VIA 9
+-----------------------
+-----------------------
+Identificador de Alumno: 20202
+Nombre: CARLOS
+Apellido: SANCHEZ
+Edad: 29
+Nota media: 6.8
+Localización: VALENCIA: LAVAPIES 74
+-----------------------
+-----------------------
+Identificador de Alumno: 30303
+Nombre: ANA
+Apellido: PEREZ
+Edad: 16
+Nota media: 9.1
+Localización: SEVILLA: TRINIDAD 56
+-----------------------
+-----------------------
+Identificador de Alumno: 40404
+Nombre: DIEGO
+Apellido: MARTINEZ
+Edad: 20
+Nota media: 4.2
+Localización: MURCIA: ARAGON 88
+-----------------------
+-----------------------
+Identificador de Alumno: 50505
+Nombre: NOELIA
+Apellido: LOPEZ
+Edad: 33
+Nota media: 5.5
+Localización: ZARAGOZA: CANALEJAS 17
+-----------------------
+-----------------------
+Identificador de Alumno: 60606
+Nombre: DAVID
+Apellido: DIAZ
+Edad: 25
+Nota media: 3.75
+Localización: MALAGA: MENENDEZ 60
+-----------------------
+-----------------------
+Identificador de Alumno: 70707
+Nombre: IRIS
+Apellido: RAMOS
+Edad: 30
+Nota media: 8.9
+Localización: BURGOS: PINTOR SOROLLA 45
+-----------------------
+-----------------------
+Identificador de Alumno: 80808
+Nombre: MANUEL
+Apellido: CASTRO
+Edad: 17
+Nota media: 2.8
+Localización: LEON: CLAVEL 11
+-----------------------
+-----------------------
+Identificador de Alumno: 90909
+Nombre: ELENA
+Apellido: IGLESIAS
+Edad: 28
+Nota media: 6.6
+Localización: OVIEDO: SOL 23
+-----------------------
+-----------------------
+Identificador de Alumno: 12121
+Nombre: JORGE
+Apellido: ORTIZ
+Edad: 21
+Nota media: 7.95
+Localización: CARTAGENA: SEGURA 38
+-----------------------
